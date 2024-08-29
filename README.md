@@ -1,54 +1,70 @@
-<img src="screenshot.png" alt="Gatsby Theme Portfolio Minimal Screenshot" width="700" />
+# Getting Started with Create React App
 
-<a href="https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/konstantinmuenster/gatsby-starter-portfolio-minimal-theme" target="_blank">
-<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud" />
-</a>
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# Gatsby Starter Portfolio Minimal Theme
+## Available Scripts
 
-#### A Gatsby Starter Project to easily get started with the Portfolio Minimal Theme.
+In the project directory, you can run:
 
-Portfolio Minimal is a Gatsby Theme that let's you create outstanding one-page portfolios within minutes. This Gatsby Starter is a boilerplate project that has the theme pre-installed and pre-configured.
+### `npm start`
 
-Just clone this Gatsby Starter, add the content. And that's it!
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-[Live Demo on Gatsby Cloud](https://gatsbystarterportfoliominimalt.gatsbyjs.io/) · [Live Demo on Netlify](https://gatsby-starter-portfolio-minimal-theme.netlify.app/) · [Portfolio Minimal Theme on Github](https://github.com/konstantinmuenster/gatsby-theme-portfolio-minimal)
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
----
+### `npm test`
 
-## Installation
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-1. Install the Gatsby CLI
+### `npm run build`
 
-   ```sh
-   npm install -g gatsby-cli
-   ```
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-2. Create a new Gatsby site with the Portfolio Minimal Starter.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-   ```sh
-   gatsby new portfolio-minimal https://github.com/konstantinmuenster/gatsby-starter-portfolio-minimal-theme
-   ```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-3. Once installed, you can begin developing your site.
+### `npm run eject`
 
-   ```sh
-   cd portfolio-minimal
-   gatsby develop
-   ```
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-4. By default, the Portfolio Minimal Starter has a `content` directory at the root of your Gatsby site. There, you can edit the theme settings as well as add content for your sections. To learn more about it, have a look at the [Readme of Portfolio Minimal](https://github.com/konstantinmuenster/gatsby-theme-portfolio-minimal/tree/main/gatsby-theme-portfolio-minimal#readme).
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
----
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-## Issues?
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-If you find any bugs or have feature suggestions, create a new issue or pull request 🙏
+## Learn More
 
-Thanks a lot for using this starter! 💪
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
----
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-<a href="https://www.buymeacoffee.com/kmuenster" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+### Code Splitting
 
-Konstantin Münster – [konstantin.digital](https://konstantin.digital)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
