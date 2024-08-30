@@ -3,11 +3,12 @@
 html, body {
   margin: 0;
   padding: 0;
-  height: 100dvh;
+  height: 100%; /* Change this to 100% */
   width: 100%;
-  font-family: 'VT323', monospace; 
+  font-family: 'VT323', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
 
 code {
