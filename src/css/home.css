@@ -5,9 +5,32 @@
     box-sizing: border-box; 
 }
 
-.content-container {
-    background-color: blueviolet;
+.home-content-container {
+    background-color: black;
     flex: 2;
     padding: 20px;
     box-sizing: border-box;
 }
+
+.big-screen{
+border: 3px solid #3BFF31;
+background-color: #1E1E1E ;
+height: 100%;
+display: flex;
+flex-direction: column;
+}
+
+.topbar{
+    display: flex;
+    justify-content: space-between;
+    background-color:#3BFF31 ;
+    align-items: center;
+    color: #2e2e2e;
+    font-size: 34px;
+}
+
+#exit{
+    width: 20px;
+    height: 20px;
+}
+
