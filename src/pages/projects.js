@@ -1,11 +1,11 @@
-import "../css/home.css"
+import "../css/projects.css"
 import Sidebar from "../components/sidebar";
-function Home(){
+function Projects(){
     return(
-<div className="home-container">
+<div className="projects-container">
 <Sidebar/>
 <div className="content-container"></div>
 </div>
     );
 }
-export default Home;
+export default Projects;

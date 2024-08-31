@@ -6,11 +6,11 @@
     flex-direction: column; 
     align-items: center;
     box-sizing: border-box; 
-    border-right: 12px solid #2C2C2C;
+    border-right: 4px solid #2b2d2e;
 }
 
 .name-plate{
-    font-size: 2.5em;
+    font-size: 2em;
     text-align: center;
     padding:10px;
     margin:0 4px;
@@ -32,30 +32,29 @@ ul>li{
     justify-content: center; 
     align-items: center; 
     list-style-type: none;
-    border-top: 3px solid #2C2C2C;
+    border-top: 0px solid #2b2d2e;
     text-align: center;
     transition: box-shadow 0.3s ease, transform 0.3s ease
 }
 
 ul>li>*{
-    font-size: 35px;
+    font-size: 30px;
     display: flex; 
     justify-content: center; 
     align-items: center; 
     color:#40AE3B;
     text-decoration: none;
-    width: 100%;
-    
+    width: 100%;   
 }
 
 ul>li>*>*{
     margin: 0 12px;
+    padding: 0;
 }
 
 ul>li>*.active {
     background-color: #3BFF31; 
-    color: #4444441f1f1f; 
-    box-shadow: 0 0 10px #3BFF31;
+    color: #2e2e2e; 
 }
 
 
