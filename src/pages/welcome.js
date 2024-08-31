@@ -14,7 +14,7 @@ function Welcome(){
     <h1 id="typewriter">Welcome to my Portfolio</h1>
     <h1 className="enter" onClick={handleEnterClick}>&lt;enter/&gt;</h1>
     <h2>Xavier Pimentel</h2>
-    <h3>v1.00</h3>
+    <h3>A Software Developer</h3>
     </div>
     );
 }

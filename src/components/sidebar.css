@@ -6,7 +6,7 @@
     flex-direction: column; 
     align-items: center;
     box-sizing: border-box; 
-    border-right: 4px solid #2b2d2e;
+    border-right: 7px solid #2b2d2e;
 }
 
 .name-plate{
@@ -32,7 +32,7 @@ ul>li{
     justify-content: center; 
     align-items: center; 
     list-style-type: none;
-    border-top: 0px solid #2b2d2e;
+    border-top: 4px solid #2b2d2e;
     text-align: center;
     transition: box-shadow 0.3s ease, transform 0.3s ease
 }
@@ -44,17 +44,22 @@ ul>li>*{
     align-items: center; 
     color:#40AE3B;
     text-decoration: none;
-    width: 100%;   
+    width: 100%;
+    padding: 2px;
+    margin:0;
 }
 
 ul>li>*>*{
     margin: 0 12px;
-    padding: 0;
+    height: 100%;
 }
 
 ul>li>*.active {
-    background-color: #3BFF31; 
-    color: #2e2e2e; 
+    background-color: #3BFF31;
+    color: #2e2e2e;
+    height: 100%;
+    padding: 6px;
+    box-sizing:border-box ;
 }
 
 

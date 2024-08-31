@@ -8,7 +8,7 @@
 .ascii-art {
     font-family: monospace;
     white-space: pre;
-    font-size: 23px;
+    font-size: 15px;
 }
 
 #typewriter {
@@ -26,7 +26,7 @@
 
 h1{
     font-weight: normal;
-    font-size: 64px;
+    font-size: 50px;
 }
 
 @keyframes typing {
@@ -81,7 +81,7 @@ h2{
 
 h3{
     position: absolute;
-    bottom: 10px;
+    bottom: 15px;
     left: 10px;
     font-size: 30px;
     font-weight: normal;
