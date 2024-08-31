@@ -1,6 +1,5 @@
 {
-  "homepage": "https://xavierpim.github.io/porto_folio/",
-  "name": "porto_folio",
+"name": "porto_folio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
