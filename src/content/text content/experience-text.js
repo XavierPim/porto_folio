@@ -1,4 +1,4 @@
-const homeContent = [
+const experienceContent = [
     {
         window: "graduation/",
         title: "Computer Systems Technology(CST) - GRADUATION",
@@ -65,4 +65,4 @@ const homeContent = [
     }, 
 ];
 
-export default homeContent;
+export default experienceContent;

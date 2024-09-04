@@ -1,7 +1,6 @@
 .small-screen{
     border: 3px solid #3BFF31;
     background-color: #1E1E1E ;
-    max-height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,17 +20,20 @@
 .small_title{
     font-size: 24px;
     margin: 0px;
-    text-decoration: underline;
 }
 
 .small_sub_title{
     font-size: 20px;
     margin: 0px;
-    color:#40AE3B;
+    color:#3BFF31;
 }
 
 .small_text{
-    color: #40AE3B;
-    font-size: 13px;
+    color: #3BFF31;
+    font-size: 16px;
     text-align: start;
+}
+
+.small_ascii{
+    font-size: 12px;
 }

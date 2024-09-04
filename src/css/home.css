@@ -5,11 +5,11 @@
     box-sizing: border-box; 
 }
 
+
 .home-content-container {
     background-color: black;
     flex: 2;
     padding: 20px;
-       overflow:hidden;
 }
 
 #homeContent{

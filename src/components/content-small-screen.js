@@ -1,7 +1,6 @@
 import "./content-small-screen.css";
 
 function ContentSmallScreen({ section }) {
-    // Ensure text is an array; if it's a string, convert it to an array with one item.
     const textArray = Array.isArray(section.text) ? section.text : [section.text];
 
     return (
@@ -11,8 +10,14 @@ function ContentSmallScreen({ section }) {
             </div>
             <div className="small_title">{section.title}</div>
             <div className="small_sub_title">{section.subtitle}</div>
+            <div className="small_sub_title">{section.subtitle1}</div>
+            <div className="small_sub_title">{section.subtitle2}</div>
+            <div className="small_sub_title">{section.subtitle3}</div>
+            <pre className="small_ascii">{section.ascii}</pre>
             <div className="small_sub_title">{section.info}</div>
-            <img src={section.img} alt="ascii art"/>
+            {section.image && (
+                <img src={section.image} alt="ascii art" />
+            )}
             <ul className="small_text">
                 {textArray.map((item, index) => (
                     <li key={index}>{item}</li>

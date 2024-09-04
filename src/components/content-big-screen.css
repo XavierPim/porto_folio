@@ -4,10 +4,14 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    }
+    overflow-y: auto;
+    overflow-x: hidden;    
+}
     
     .topbar{
         display: flex;
+        position: sticky;
+        z-index: 1000;
         justify-content: space-between;
         background-color:#3BFF31 ;
         align-items: center;
@@ -20,3 +24,16 @@
         height: 20px;
     }
     
+
+.page_title{
+    align-self: center;
+    padding: 15px;
+    max-width: 200px;
+    font-size: 30px;
+    border: 2px solid #3BFF31;
+    margin: 10px;
+}
+.header{
+    display: flex;
+    justify-content: space-around;
+}
