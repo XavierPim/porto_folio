@@ -10,7 +10,7 @@ function Sidebar() {
     return (
         <div className="sidebar">
             <h1 className="name-plate">Xavier_Pimentel</h1>
-            <ul>
+            <ul className='navbar_ul'>
                 <li>
                     <NavLink to="/home" activeClassName="active"><img src={home_icon} alt="home_icon" />Home</NavLink>
                 </li>

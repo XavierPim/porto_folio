@@ -16,7 +16,7 @@
     margin:0 4px;
 }
 
-ul{
+.navbar_ul{
     width: 100%;
     padding: 0px;
     margin-top:0px ;
@@ -25,7 +25,7 @@ ul{
     flex-direction: column;
 }
 
-ul>li{
+.navbar_ul>li{
     width: 100%;
     flex:1;
     display: flex; 
@@ -37,7 +37,7 @@ ul>li{
     transition: box-shadow 0.3s ease, transform 0.3s ease
 }
 
-ul>li>*{
+.navbar_ul>li>*{
     font-size: 30px;
     display: flex; 
     justify-content: center; 
@@ -49,12 +49,12 @@ ul>li>*{
     margin:0;
 }
 
-ul>li>*>*{
+.navbar_ul>li>*>*{
     margin: 0 12px;
     height: 100%;
 }
 
-ul>li>*.active {
+.navbar_ul>li>*.active {
     background-color: #3BFF31;
     color: #2e2e2e;
     height: 100%;
@@ -63,12 +63,12 @@ ul>li>*.active {
 }
 
 
-ul > li.active:hover {
+.navbar_ul> li.active:hover {
     transform: scale(1.05); /* Keep the hover effect for the active item */
 }
 
 
-ul > li:hover {
+.navbar_ul> li:hover {
     box-shadow: 0 0 20px #40AE3B; 
     transform: scale(1.05); 
     border-right-color:3px solid #40AE3B;

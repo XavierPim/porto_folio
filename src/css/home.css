@@ -9,7 +9,9 @@
     background-color: black;
     flex: 2;
     padding: 20px;
-    box-sizing: border-box;
+       overflow:hidden;
 }
 
-
+#homeContent{
+    padding: 20px;
+}
