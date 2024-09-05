@@ -99,7 +99,7 @@ export const cplusplusText = [
 	},
 	{
 		window: "course-conflict/",
-		title: "Course Scheduling and Conflict Resol",
+		title: "Course Scheduling and Conflict Resolution",
 		subtitle:
 			"Description: Implemented a course scheduling system that sorts courses by day and time, and identifies scheduling conflicts. It demonstrates efficient organization and conflict detection in managing course schedules. ",
 		subtitle1: "",

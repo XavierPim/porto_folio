@@ -14,8 +14,8 @@ function ContentSmallScreen({ section }) {
             <div className="small_sub_title">{section.subtitle1}</div>
             <div className="small_sub_title">{section.subtitle2}</div>
             <div className="small_sub_title">{section.subtitle3}</div>
-            <pre className="small_ascii">{section.ascii}</pre>
             <div className="small_sub_title">{section.info}</div>
+            <pre className="small_ascii">{section.ascii}</pre>
             {section.image && (
                 <img src={section.image} alt="ascii art" className="small_img"/>
             )}
