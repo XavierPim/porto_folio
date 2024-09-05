@@ -2,20 +2,17 @@
     display: flex; 
     width: 100%; 
     height: 100%; 
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
-.content-container {
-    background-color: black;
-    flex: 2;
-    padding: 20px;
-    box-sizing: border-box; 
-}
 
-.language-container{
+.content-container>*>.language-container{
     display: flex;
     flex-direction: column;
     height: 100%;
+    justify-content: center;
+    overflow-y: auto;
+    overflow-x: hidden; 
 }
 
 .lang-tabs{
@@ -34,11 +31,17 @@
     width:20%
 }
 
-.lang-content{
+.lang-content {
+    overflow-y: auto;
+    overflow-x: hidden;  
     border: 3px solid #3BFF31;
-    height: 100%;
-    margin: 0px 15px 20px;
+    height: calc(100% - 60px); 
+    margin: 0 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
 }
+
 
 .lang-tabs>.active-tab {
     border: 2px solid #3BFF31;

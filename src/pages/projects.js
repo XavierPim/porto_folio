@@ -12,7 +12,6 @@ function Projects() {
 	const [activeTab, setActiveTab] = useState("c++");
 	const [projectCount, setProjectCount] = useState(0);
 
-	// Function to get the content based on active tab
 	const getContentForTab = (tab) => {
 		switch (tab) {
 			case "c++":
@@ -30,11 +29,10 @@ function Projects() {
 		}
 	};
 
-	// UseEffect to update the project count when the activeTab changes
 	useEffect(() => {
 		const content = getContentForTab(activeTab);
-		setProjectCount(content.length); // Update project count based on content length
-	}, [activeTab]); // Runs when `activeTab` changes
+		setProjectCount(content.length); 
+	}, [activeTab]); 
 
 	const renderContent = () => {
 		const content = getContentForTab(activeTab);

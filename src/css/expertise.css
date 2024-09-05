@@ -7,7 +7,6 @@
 
 .content-container {
     background-color: black;
-    flex: 2;
     padding: 20px;
     box-sizing: border-box;
 }

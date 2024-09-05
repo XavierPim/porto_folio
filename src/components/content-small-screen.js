@@ -16,14 +16,12 @@ function ContentSmallScreen({ section }) {
             <pre className="small_ascii">{section.ascii}</pre>
             <div className="small_sub_title">{section.info}</div>
             {section.image && (
-                <img src={section.image} alt="ascii art" />
+                <img src={section.image} alt="ascii art" className="small_img"/>
             )}
             <ul className="small_text">
-                {textArray
-                    .filter(item => item && item.trim() !== "") // Filter out empty or whitespace-only items
-                    .map((item, index) => (
-                        <li key={index}>{item}</li>
-                    ))}
+                {textArray.map((item, index) => (
+                    <li key={index}>{item}</li>
+                ))}
             </ul>
         </div>
     );
