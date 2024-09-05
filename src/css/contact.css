@@ -5,18 +5,18 @@
     box-sizing: border-box; 
 }
 
-.content-container {
-    background-color: black;
-    flex: 2;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
 
 #contact-big-parent>*{
     align-items: center;
     justify-content: space-between;
 }
+#contact-big-parent>*>.scrollable-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
 .email>a>pre {
     font-size: 8px;
 }
@@ -27,10 +27,10 @@
 
 .email, .linkedin{
     font-size: 30px;
-    border: 2px solid #3BFF31;
-    margin: 20px;
+    border: 3px solid #3BFF31;
+    margin: 0 20px 20px 20px;
     width: 40%;
-    min-width: 100px;
+    padding: 0 20px 20px 20px;
     transition: text-shadow 0.3s ease, color 0.3s ease;
 }
 .email:hover, .linkedin:hover{
