@@ -21,7 +21,7 @@
 }
 
 .small_title{
-    font-size: 24px;
+    font-size: 20px;
     margin: 0px;
     text-decoration: underline;
     padding: 10px;
@@ -29,10 +29,9 @@
 
 
 .small_sub_title{
-    font-size: 20px;
+    font-size: 17px;
     margin: 0px;
     color:#40AE3B;
-    text-align: justify;
     padding: 0px 10px
 }
 
