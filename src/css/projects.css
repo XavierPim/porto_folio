@@ -11,3 +11,38 @@
     padding: 20px;
     box-sizing: border-box;
 }
+
+.language-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.lang-tabs{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 15px;
+}
+
+.lang-tabs>div{
+    border:2px solid #D9D9D9;
+    border-bottom: 0px;
+    padding: 5px 20px;
+    font-size: 25px;
+    color: #D9D9D9;
+    margin: 0 5px ;
+    width:20%
+}
+
+.lang-content{
+    border: 3px solid #3BFF31;
+    height: 100%;
+    margin: 0px 15px 20px;
+}
+
+.lang-tabs>.active-tab {
+    border: 2px solid #3BFF31;
+    background-color: #3BFF31;
+    color: #1e1e1e;
+    border-bottom: 0;
+}
