@@ -11,3 +11,71 @@
     padding: 20px;
     box-sizing: border-box;
 }
+
+
+#contact-big-parent>*{
+    align-items: center;
+    justify-content: space-between;
+}
+.email>a>pre {
+    font-size: 8px;
+}
+
+.linkedin>a>pre {
+    font-size: 8px;
+}
+
+.email, .linkedin{
+    font-size: 30px;
+    border: 2px solid #3BFF31;
+    margin: 20px;
+    width: 40%;
+    min-width: 100px;
+    transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+.email:hover, .linkedin:hover{
+    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
+    color: white;
+}
+.phone>p>a{
+    background-color: #3BFF31;
+    color: #1e1e1e;
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    margin: 3px 6px;
+    padding: 3px 5px;
+    transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+.phone > p > a:hover {
+    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
+    color: white;
+}
+.phone > p > a:active {
+    background-color: #40AE3B;
+}
+
+a{
+    color:#3BFF31;
+    text-decoration: none;
+    margin:10px;
+}
+
+button{
+    background-color: #3BFF31;
+    color: #1e1e1e;
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    margin: 3px 6px;
+    transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+button:hover{
+    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
+    color: white;
+}
+
+button:active{
+    background-color: #40AE3B;
+}
+
