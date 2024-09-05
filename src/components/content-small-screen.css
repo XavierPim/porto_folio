@@ -20,16 +20,17 @@
 .small_title{
     font-size: 24px;
     margin: 0px;
+    text-decoration: underline;
 }
 
 .small_sub_title{
     font-size: 20px;
     margin: 0px;
-    color:#3BFF31;
+    color:#40AE3B;
 }
 
 .small_text{
-    color: #3BFF31;
+    color: #40AE3B;
     font-size: 16px;
     text-align: start;
 }

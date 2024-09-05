@@ -5,17 +5,17 @@ import tabs from "../content/text content/nav-tabs";
 import ContentSmallScreen from "../components/content-small-screen";
 import HomeContent from "../content/text content/home-text";
 function Home() {
-	const title = "About me";
-	const First = "Resume";
+	const github = "Github";
+	const resume = "Resume";
 	return (
 		<div className="home-container">
 			<Sidebar />
 			<div className="home-content-container">
 				<ContentBigScreen tab_name={tabs.home}>
 					<div className="header">
-						<div className="page_title">{title} </div>
+						<div className="page_title">{github} </div>
 						<div className="page_title">
-							{First}
+							{resume}
 						</div>
 					</div>
 					{HomeContent.map((section, index) => (

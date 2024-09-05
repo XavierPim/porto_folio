@@ -12,7 +12,7 @@ function Sidebar() {
             <h1 className="name-plate">Xavier_Pimentel</h1>
             <ul className='navbar_ul'>
                 <li>
-                    <NavLink to="/home" activeClassName="active"><img src={home_icon} alt="home_icon" />Home</NavLink>
+                    <NavLink to="/home" activeClassName="active"><img src={home_icon} alt="home_icon" />About</NavLink>
                 </li>
                 <li>
                     <NavLink to="/expertise" activeClassName="active"><img src={expertise_icon} alt="expertise_icon" />Expertise</NavLink>

@@ -19,9 +19,11 @@ function ContentSmallScreen({ section }) {
                 <img src={section.image} alt="ascii art" />
             )}
             <ul className="small_text">
-                {textArray.map((item, index) => (
-                    <li key={index}>{item}</li>
-                ))}
+                {textArray
+                    .filter(item => item && item.trim() !== "") // Filter out empty or whitespace-only items
+                    .map((item, index) => (
+                        <li key={index}>{item}</li>
+                    ))}
             </ul>
         </div>
     );
