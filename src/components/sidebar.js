@@ -12,19 +12,44 @@ function Sidebar() {
             <h1 className="name-plate">Xavier_Pimentel</h1>
             <ul className='navbar_ul'>
                 <li>
-                    <NavLink to="/home" activeClassName="active"><img src={home_icon} alt="home_icon" />About</NavLink>
+                    <NavLink 
+                        to="/home" 
+                        className={({ isActive }) => (isActive ? "active" : "")}
+                    >
+                        <img src={home_icon} alt="home_icon" />About
+                    </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/expertise" activeClassName="active"><img src={expertise_icon} alt="expertise_icon" />Expertise</NavLink>
+                    <NavLink 
+                        to="/expertise" 
+                        className={({ isActive }) => (isActive ? "active" : "")}
+                    >
+                        <img src={expertise_icon} alt="expertise_icon" />Expertise
+                    </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/experience" activeClassName="active"><img src={experience_icon} alt="experience_icon" />Experience</NavLink>
+                    <NavLink 
+                        to="/experience" 
+                        className={({ isActive }) => (isActive ? "active" : "")}
+                    >
+                        <img src={experience_icon} alt="experience_icon" />Experience
+                    </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/projects" activeClassName="active"><img src={projects_icon} alt="projects_icon" />Projects</NavLink>
+                    <NavLink 
+                        to="/projects" 
+                        className={({ isActive }) => (isActive ? "active" : "")}
+                    >
+                        <img src={projects_icon} alt="projects_icon" />Projects
+                    </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/contact" activeClassName="active"><img src={contact_icon} alt="contact_icon" />Contact</NavLink>
+                    <NavLink 
+                        to="/contact" 
+                        className={({ isActive }) => (isActive ? "active" : "")}
+                    >
+                        <img src={contact_icon} alt="contact_icon" />Contact
+                    </NavLink>
                 </li>
             </ul>
         </div>

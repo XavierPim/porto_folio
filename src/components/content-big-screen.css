@@ -1,40 +1,62 @@
-.big-screen{
-    border: 3px solid #3BFF31;
-    background-color: #1E1E1E ;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow-y: auto;
-    overflow-x: hidden;    
+.big-screen {
+	border: 3px solid #3bff31;
+	background-color: #1e1e1e;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
 }
-    
-    .topbar{
-        display: flex;
-        position: sticky;
-        z-index: 1000;
-        justify-content: space-between;
-        background-color:#3BFF31 ;
-        align-items: center;
-        color: #2e2e2e;
-        font-size: 34px;
-    }
-    
-    #exit{
-        width: 20px;
-        height: 20px;
-    }
-    
+.topbar {
+	display: flex;
+	justify-content: space-between;
+	background-color: #3bff31;
+	color: #2e2e2e;
+	font-size: 34px;
+	width: 100%;
+}
 
-.page_title{
-    align-self: center;
-    padding: 15px;
-    max-width: 200px;
-    font-size: 30px;
-    border: 2px solid #3BFF31;
-    margin: 10px;
+.scrollable-content {
+	flex: 1;
+    
+	overflow-y: auto;
+	padding: 40px;
+	scrollbar-color: #3bff31 #1e1e1e;
 }
-.header{
-    display: flex;
-    justify-content: space-around;
+
+.big-screen::-webkit-scrollbar {
+	width: 12px;
+}
+
+.big-screen::-webkit-scrollbar-track {
+	background-color: #2e2e2e;
+}
+
+.big-screen::-webkit-scrollbar-thumb {
+	background-color: #3bff31;
+}
+
+.big-screen::-webkit-scrollbar-thumb:hover {
+	background-color: #2bff2f;
+}
+
+#exit {
+	width: 20px;
+	height: 20px;
+}
+
+.page_title {
+	align-self: center;
+	padding: 15px;
+	max-width: 200px;
+	font-size: 30px;
+	border: 2px solid #3bff31;
+	margin: 10px;
+}
+.header {
+	display: flex;
+	justify-content: space-around;
+	margin: 10px 0px;
+}
+
+.spacers{
+    font-size: 3em;
 }

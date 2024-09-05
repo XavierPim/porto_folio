@@ -4,6 +4,7 @@ function ContentSmallScreen({ section }) {
     const textArray = Array.isArray(section.text) ? section.text : [section.text];
 
     return (
+        <div className="small-container">
         <div className="small-screen">
             <div className="topbar">
                 <div>{section.window}</div>
@@ -24,6 +25,13 @@ function ContentSmallScreen({ section }) {
                 ))}
             </ul>
         </div>
+        <div className="spacers">*</div>
+        <div className="spacers">*</div>
+        <div className="spacers">*</div>
+        <div className="spacers">*</div>
+        <div className="spacers">*</div>
+        </div>
+        
     );
 }
 
