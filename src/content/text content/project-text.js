@@ -1,3 +1,23 @@
+// c++ images
+import abstract from "../abstract-factory.png"
+import auctioneer from "../auctioneer-observer.png"
+import google from "../google-ranking.png"
+import calculator from "../calculator.png"
+import genetic from "../genetic.png"
+import poly from "../inheritance-polymorph.png"
+import course from "../course-conflict.png"
+import library from "../library.png"
+
+// javascript images/videos
+import umbrella from "../umbrella.png";
+import serenity from '../serenity.mp4';
+import free from "../free.png"
+
+//flutter video
+import mint from "../mint.png"
+import mintDemo from "../MINT DEMO.mp4"
+
+
 export const cplusplusText = [
 	{
 		window: "genetic-algo-TSP/",
@@ -9,7 +29,7 @@ export const cplusplusText = [
 		subtitle3: "",
 		info: "Recursive approach used for crossover",
 		ascii: "",
-		image: "",
+		image: genetic,
 		text: "",
 		link: "Github",
 	},
@@ -23,7 +43,7 @@ export const cplusplusText = [
 		subtitle3: "",
 		info: "The project involved constructing:",
 		ascii: "",
-		image: "",
+		image: google,
 		text: [
 			"connectivity",
 			"importance",
@@ -43,7 +63,7 @@ export const cplusplusText = [
 		subtitle3: "",
 		info: "Current Functionality",
 		ascii: "",
-		image: "",
+		image: calculator,
 		text: [
 			"addition",
 			"subtraction",
@@ -62,7 +82,7 @@ export const cplusplusText = [
 		subtitle3: "",
 		info: "The system manages the bidding process by updating bids and identifying the highest bidder through iterative notifications.",
 		ascii: "",
-		image: "",
+		image: auctioneer,
 		text: "",
 		link: "Github",
 	},
@@ -76,7 +96,7 @@ export const cplusplusText = [
 		subtitle3: "",
 		info: "",
 		ascii: "",
-		image: "",
+		image: poly,
 		text: "",
 		link: "Github",
 	},
@@ -90,7 +110,7 @@ export const cplusplusText = [
 		subtitle3: "",
 		info: "Features:",
 		ascii: "",
-		image: "",
+		image: library,
 		text: [
 			"Inventory Management",
 			"Search Item",
@@ -107,7 +127,7 @@ export const cplusplusText = [
 		subtitle3: "",
 		info: "Involves:",
 		ascii: "",
-		image: "",
+		image: course,
 		text: ["Text file parsing", "Dynamic conflict resolution"],
 		link: "Github",
 	},
@@ -121,7 +141,7 @@ export const cplusplusText = [
 		subtitle3: "",
 		info: "Derived classes like FairyMaze and DystopianMaze implement this interface to add rooms to their respective mazes.",
 		ascii: "",
-		image: "",
+		image: abstract,
 		text: "",
 		link: "Github",
 	},
@@ -137,7 +157,7 @@ export const javascriptText = [
 		subtitle3: "",
 		info: "Created seamless functionality for user interaction by integrating 3 cloud based databases:",
 		ascii: "",
-		image: "",
+		image: free,
 		text: [
 			"Firestore - Authentication",
 			"MongoDB - User text based data",
@@ -155,8 +175,23 @@ export const javascriptText = [
 		subtitle3: "",
 		info: "",
 		ascii: "",
+		image: umbrella,
+		text: [],
+		link: "",
+	},
+	{
+		window: "serenity/",
+		title: "Serenity - Memory and Meditation for Seniors",
+		subtitle:
+			"Developed a multi-application platform web app to enable games and application in one web-application. The Serenity is developed to help senior citizens improve cognitive health with memory games and meditation activities",
+		subtitle1: "Role: Lead Front-end and UI|UX Developer",
+		subtitle2: "",
+		subtitle3: "",
+		info: "",
+		ascii: "",
 		image: "",
-		text: "",
+		video: serenity,
+		text: [],
 		link: "",
 	},
 ];
@@ -172,7 +207,8 @@ export const dartText = [
 		subtitle3: "",
 		info: "",
 		ascii: "",
-		image: "",
+		image: mint,
+		video: mintDemo,
 		text: [
 			"Firestore - Authentication",
 			"MongoDB - User text based data",

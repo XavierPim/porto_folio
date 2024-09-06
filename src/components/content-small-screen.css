@@ -47,9 +47,16 @@
 
 .small_img {
 	width: 80%;
+	border: 2px solid #D9D9D9;
+	padding: 2px;
+	margin-bottom: 10px;
 }
 
 .small_ascii {
 	font-size: 9px;
 	padding: 10px;
+}
+
+video{
+	border: 3px solid #D9D9D9;
 }
