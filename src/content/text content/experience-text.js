@@ -4,6 +4,7 @@ import soccer from "../../ascii art/soccer";
 import plane from "../../ascii art/plane";
 import senior from "../../ascii art/senior";
 import pc from "../../ascii art/computer";
+import logo from "../../logo.svg"
 const experienceContent = [
     {
         window: "graduation/",
