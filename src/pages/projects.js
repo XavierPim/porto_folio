@@ -5,6 +5,8 @@ import ContentBigScreen from "../components/content-big-screen";
 import tabs from "../content/text content/nav-tabs";
 import { cplusplusText, javascriptText, dartText, cText, leetText } from "../content/text content/project-text";
 import ContentSmallScreen from "../components/content-small-screen";
+//backgrounds
+// import 
 
 function Projects() {
 	const title = "-Projects-";

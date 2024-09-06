@@ -1,21 +1,21 @@
 // c++ images
-import abstract from "../abstract-factory.png"
-import auctioneer from "../auctioneer-observer.png"
-import google from "../google-ranking.png"
-import calculator from "../calculator.png"
-import genetic from "../genetic.png"
-import poly from "../inheritance-polymorph.png"
-import course from "../course-conflict.png"
-import library from "../library.png"
+import abstract from "../project-cplus/abstract-factory.png"
+import auctioneer from "../project-cplus/auctioneer-observer.png"
+import google from "../project-cplus/google-ranking.png"
+import calculator from "../project-cplus/calculator.png"
+import genetic from "../project-cplus/genetic.png"
+import poly from "../project-cplus/inheritance-polymorph.png"
+import course from "../project-cplus/course-conflict.png"
+import library from "../project-cplus/library.png"
 
 // javascript images/videos
-import umbrella from "../umbrella.png";
-import serenity from '../serenity.mp4';
-import free from "../free.png"
+import umbrella from "../project-js/umbrella.png";
+import serenity from '../project-js/serenity.mp4';
+import free from "../project-js/free.png"
 
 //flutter video
-import mint from "../mint.png"
-import mintDemo from "../mint-small.mp4"
+import mint from "../project-dart/mint.png"
+import mintDemo from "../project-dart/mint-small.mp4"
 
 
 export const cplusplusText = [
@@ -30,7 +30,7 @@ export const cplusplusText = [
 		info: "Recursive approach used for crossover",
 		ascii: "",
 		image: genetic,
-		text: "",
+		text: [],
 		link: "Github",
 	},
 	{
@@ -83,7 +83,7 @@ export const cplusplusText = [
 		info: "The system manages the bidding process by updating bids and identifying the highest bidder through iterative notifications.",
 		ascii: "",
 		image: auctioneer,
-		text: "",
+		text: [],
 		link: "Github",
 	},
 	{
@@ -97,7 +97,7 @@ export const cplusplusText = [
 		info: "",
 		ascii: "",
 		image: poly,
-		text: "",
+		text: [],
 		link: "Github",
 	},
 	{
@@ -142,7 +142,7 @@ export const cplusplusText = [
 		info: "Derived classes like FairyMaze and DystopianMaze implement this interface to add rooms to their respective mazes.",
 		ascii: "",
 		image: abstract,
-		text: "",
+		text: [],
 		link: "Github",
 	},
 ];
@@ -310,7 +310,7 @@ export const leetText = [
 		info: "",
 		ascii: "",
 		image: "",
-		text: "",
+		text: [],
 		link: "",
 	},
 ];

@@ -73,7 +73,7 @@ const experienceContent = [
         info: "JAN 2022 - APR 2024| Burnaby",
         image: "",
         ascii: pc,
-        text: "",
+        text: [],
         link: ""
         
     }, 

@@ -12,7 +12,7 @@ const HomeContent = [
 		info: "",
 		ascii:coder,
 		image: "",
-		text: "", 
+		text: [], 
 		link: "",
 	},
 	{
@@ -25,7 +25,7 @@ const HomeContent = [
 		info: "",
 		ascii:castle,
 		image: "",
-		text: "", 
+		text: [], 
 		link: "",
 	},
 	{
