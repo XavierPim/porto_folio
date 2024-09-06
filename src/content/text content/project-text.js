@@ -15,7 +15,7 @@ import free from "../free.png"
 
 //flutter video
 import mint from "../mint.png"
-import mintDemo from "../MINT DEMO.mp4"
+import mintDemo from "../mint-small.mp4"
 
 
 export const cplusplusText = [
