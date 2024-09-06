@@ -1,6 +1,6 @@
 import coder from "../../ascii art/coder";
 import castle from "../../ascii art/castle";
-import logos from "../../ascii art/logos.png";
+import logos from "../../content/logos.png";
 import hiker from "../../ascii art/hiker";
 const HomeContent = [
 	{
