@@ -46,7 +46,7 @@ function Contact() {
                     </div>
 
                     <div className="phone">
-                        <p>For phone number requests, please <a href={`mailto:${email}?subject=Request%20for%20phone%20number`} className="box-link">email me</a> or reach out through <a href={linked} target="_blank" rel="noopener noreferrer" className="contact-link">LinkedIn</a>.</p>
+                        <p> Please connect through <a href={`mailto:${email}?subject=Request%20for%20phone%20number`} className="box-link">email</a> or reach out through <a href={linked} target="_blank" rel="noopener noreferrer" className="box-link">LinkedIn</a></p>
                     </div>
                 </ContentBigScreen>
             </div>

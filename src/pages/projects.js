@@ -63,13 +63,14 @@ function Projects() {
         ));
     };
 
+    var tab_name = tabs.projects + activeTab;
+
     return (
         <div className="projects-container">
             <Sidebar />
-            {/* Apply dynamic background style */}
             <div
                 className="content-container">
-                <ContentBigScreen tab_name={tabs.projects}>
+                <ContentBigScreen tab_name={tab_name}>
                     <div className="header">
                         <div className="page_title">{title}</div>
                         <div className="page_title">

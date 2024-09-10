@@ -37,23 +37,6 @@
     text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
     color: white;
 }
-.box-link{
-    background-color: #3BFF31;
-    color: #1e1e1e;
-    font-family: 'VT323', monospace;
-    font-size: 20px;
-    margin:3px 6px 10px;
-    padding: 3px 12px;
-    transition: text-shadow 0.3s ease, color 0.3s ease;
-}
-
-.box-link:hover {
-    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
-    color: white;
-}
-.box-link:active {
-    background-color: #40AE3B;
-}
 
 a{
     color:#3BFF31;

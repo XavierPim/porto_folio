@@ -29,15 +29,16 @@ export const cplusplusText = [
 		window: "genetic-algo-TSP/",
 		title: "Genetic Algorithm for Travelling Salesman Problem",
 		subtitle:
-			"Description: Developed an algorithm to solve the Travelling Salesman Problem using genetic algorithms, optimizing the shortest possible route across multiple cities through techniques like selection, crossover, and mutation.",
+			"Description: Developed an algorithm to solve the Travelling Salesman Problem using genetic algorithms, optimizing the shortest possible route across multiple cities",
 		subtitle1: "",
 		subtitle2: "",
 		subtitle3: "",
-		info: "Recursive approach used for crossover",
+		info: "Features Recursive approach used for crossover and the following: ",
 		ascii: "",
 		image: genetic,
-		text: [],
-		link: {cplus: cplus_link},
+		text: ["selection", 
+			"crossover", "mutation"],
+		link: cplus_link,
 	},
 	{
 		window: "google-search-makrov/",
@@ -53,11 +54,10 @@ export const cplusplusText = [
 		text: [
 			"connectivity",
 			"importance",
-			" teleportation",
-			"transition matrices to iteratively",
+			"teleportation",
 			"compute and rank the importance of web pages",
 		],
-		link: {cplus: cplus_link},
+		link: cplus_link,
 	},
 	{
 		window: "rpn-calculator/",
@@ -96,8 +96,7 @@ export const cplusplusText = [
 		window: "inheritance-polymorphism/",
 		title: "Inheritance and Polymorphism",
 		subtitle:
-			"Description: Created a simulation that showcases inheritance and polymorphism through a hierarchy of animals. Different types of animals exhibit unique behaviours such as movement, eating, and sleeping. The simulation includes various animal types interacting dynamically, with each class demonstrating its own specialized behavior.",
-		subtitle1: "",
+			"Description: Created a simulation that showcases inheritance and polymorphism through a hierarchy of animals. Different types of animals exhibit unique behaviours such as movement, eating, and sleeping. ",
 		subtitle2: "",
 		subtitle3: "",
 		info: "",
@@ -110,7 +109,7 @@ export const cplusplusText = [
 		window: "library-generator/",
 		title: "Library Management System with Generator Pattern",
 		subtitle:
-			"Description: Implemented a library management system utilizing the Generator pattern to streamline the creation of different types of library items. The system supports various item types, such as books, DVDs, and journals, through a flexible item generation mechanism.",
+			"Description: Implemented a library management system utilizing the Generator pattern to streamline the creation of different types of library items. ",
 		subtitle1: "",
 		subtitle2: "",
 		subtitle3: "",
@@ -119,7 +118,9 @@ export const cplusplusText = [
 		image: library,
 		text: [
 			"Inventory Management",
-			"Search Item",
+			"Search Items",
+			"Remove Items",
+			"Delete Items"
 		],
 		link: cplus_link,
 	},
@@ -141,7 +142,7 @@ export const cplusplusText = [
 		window: "abstract-factory pattern",
 		title: "Maze Creation with Abstract Classes/Factory Pattern",
 		subtitle:
-			"Description: This implementation demonstrates the use of the factory pattern combined with abstract classes to generate themed mazes, such as fairy and dystopian mazes.",
+			"Description: This implementation demonstrates the use of the factory pattern combined with abstract classes to generate themed mazes.",
 		subtitle1: "The Maze class serves as an abstract base class, defining a common interface for adding rooms.",
 		subtitle2: "",
 		subtitle3: "",
@@ -266,7 +267,7 @@ export const cText = [
 	},
 	{
 		window: "remote_shell_IPv_4",
-		title: "Linux based remote shell in IPv 4",
+		title: "Linux based remote shell in IPv4",
 		subtitle:
 			"Description: Server and client program to run as a remote shell. Server listens for incoming clients and once connected can run native Linux shell commands",
 		subtitle1: "",
@@ -276,7 +277,6 @@ export const cText = [
 		ascii: "",
 		image: "",
 		text: [
-			"Self start server activation",
 			"Users can run most Unix-based commands that call execv()",
 			"Multi-OS support: Ubuntu, MacOS, Fedora",
             "Can accept clients and be sent commands via the local network"
