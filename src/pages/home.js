@@ -13,10 +13,10 @@ function Home() {
 			<div className="home-content-container">
 				<ContentBigScreen tab_name={tabs.home}>
 					<div className="header">
-						<div className="page_title">{github} </div>
-						<div className="page_title">
+						<a className="box-link" href="https://github.com/XavierPim"  target="_blank" rel="noopener noreferrer">{github} </a>
+						<a className="box-link" href="/resume.html" target="_blank" rel="noopener noreferrer">
 							{resume}
-						</div>
+						</a>
 					</div>
 					{HomeContent.map((section, index) => (
 						<ContentSmallScreen key={index} section={section} />

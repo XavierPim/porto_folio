@@ -8,6 +8,7 @@ import poly from "../project-cplus/inheritance-polymorph.png"
 import course from "../project-cplus/course-conflict.png"
 import library from "../project-cplus/library.png"
 
+
 // javascript images/videos
 import umbrella from "../project-js/umbrella.png";
 import serenity from '../project-js/serenity.mp4';
@@ -17,6 +18,11 @@ import free from "../project-js/free.png"
 import mint from "../project-dart/mint.png"
 import mintDemo from "../project-dart/mint-small.mp4"
 
+//links
+const cplus_link = "https://github.com/XavierPim/c_plusplus.git";
+const ncurse_link = "https://github.com/XavierPim/Multi_user-Ncurses-IPV-4_6.git";
+const shell_link = "https://github.com/XavierPim/RemoteShell_IPV4.git";
+const umbrella_link = "https://umbrellabby15.web.app/";
 
 export const cplusplusText = [
 	{
@@ -31,7 +37,7 @@ export const cplusplusText = [
 		ascii: "",
 		image: genetic,
 		text: [],
-		link: "Github",
+		link: {cplus: cplus_link},
 	},
 	{
 		window: "google-search-makrov/",
@@ -51,7 +57,7 @@ export const cplusplusText = [
 			"transition matrices to iteratively",
 			"compute and rank the importance of web pages",
 		],
-		link: "Github",
+		link: {cplus: cplus_link},
 	},
 	{
 		window: "rpn-calculator/",
@@ -70,7 +76,7 @@ export const cplusplusText = [
 			"division",
 			"multiplication"
 		],
-		link: "Github",
+		link: cplus_link,
 	},
 	{
 		window: "auctioneer-observer/",
@@ -84,7 +90,7 @@ export const cplusplusText = [
 		ascii: "",
 		image: auctioneer,
 		text: [],
-		link: "Github",
+		link: cplus_link,
 	},
 	{
 		window: "inheritance-polymorphism/",
@@ -98,7 +104,7 @@ export const cplusplusText = [
 		ascii: "",
 		image: poly,
 		text: [],
-		link: "Github",
+		link: cplus_link,
 	},
 	{
 		window: "library-generator/",
@@ -115,7 +121,7 @@ export const cplusplusText = [
 			"Inventory Management",
 			"Search Item",
 		],
-		link: "Github",
+		link: cplus_link,
 	},
 	{
 		window: "course-conflict/",
@@ -129,7 +135,7 @@ export const cplusplusText = [
 		ascii: "",
 		image: course,
 		text: ["Text file parsing", "Dynamic conflict resolution"],
-		link: "Github",
+		link: cplus_link,
 	},
 	{
 		window: "abstract-factory pattern",
@@ -143,7 +149,7 @@ export const cplusplusText = [
 		ascii: "",
 		image: abstract,
 		text: [],
-		link: "Github",
+		link: cplus_link,
 	},
 ];
 
@@ -177,7 +183,7 @@ export const javascriptText = [
 		ascii: "",
 		image: umbrella,
 		text: [],
-		link: "",
+		link: umbrella_link,
 	},
 	{
 		window: "serenity/",
@@ -235,7 +241,7 @@ export const cText = [
 			"Users can control avatar via arrow keys",
 			"Multi-OS support: Ubuntu, MacOS, Fedora",
 		],
-		link: "",
+		link: ncurse_link,
 	},
 	{
 		window: "multi_client_chat_server_IPV_4|6/",
@@ -275,7 +281,7 @@ export const cText = [
 			"Multi-OS support: Ubuntu, MacOS, Fedora",
             "Can accept clients and be sent commands via the local network"
 		],
-		link: "",
+		link: shell_link,
 	},
 
 	{

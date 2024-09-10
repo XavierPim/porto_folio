@@ -1,0 +1,134 @@
+/* =============
+Global Styles
+============= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap');
+
+
+.html, body{
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    font-size:  15px;
+    line-height: 1.4;
+    background-color: white;
+}
+
+.spacer {
+    margin: 0px auto;
+}
+
+h1, h2, h3, p, a, li {
+    color: black;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+
+}
+
+h2 {
+    background-color: #d0cece;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h3 {
+    margin: 0;
+    display: flex;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #2f5496;
+}
+
+p {
+    padding: 0;
+    margin-block-end: 3px;
+    margin-block-start: 3px;
+}
+
+ul {
+    margin: 0px;
+}
+
+li {
+    margin: 3px;
+}
+
+
+/* =============
+Header
+============= */
+
+.headerInfo {
+    margin-bottom: 6px;
+}
+
+.headerInfo > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.headerInfo > ul > li {
+    list-style-type: none;
+    margin-bottom: 1px;
+}
+
+.headerInfo > ul > li:not(:last-child) {
+    margin-right: 8px;
+}
+
+.headerInfo > ul > li:not(:last-child):after {
+    content: "|";
+    margin-left: 8px;
+}
+
+/* =============
+Content
+============= */
+.career-highlights > ul > li {
+    list-style-type: square;
+}
+
+.company-name {
+    margin: 0;
+    border-bottom: 1px solid #d9e2f3;
+}
+
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .headerInfo > ul {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 960px) {
+    .headerInfo > ul {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .headerInfo > ul {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 576px) {
+    .headerInfo > ul {
+        font-size: 8px;
+    }
+}

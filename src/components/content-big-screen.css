@@ -20,6 +20,7 @@
 	margin: 10px 0px;
 }
 
+
 .scrollable-content {
 	flex: 1;
 	overflow-y: auto;
@@ -49,6 +50,16 @@
 }
 
 .page_title {
+	align-self: center;
+	padding: 15px;
+	max-width: 200px;
+	font-size: 30px;
+	border: 2px solid #3bff31;
+	margin: 10px;
+}
+
+
+a .page_title {
 	align-self: center;
 	padding: 15px;
 	max-width: 200px;

@@ -22,7 +22,7 @@
 }
 
 .lang-tabs>div{
-    border:2px solid #D9D9D9;
+    border:2px dashed #D9D9D9;
     border-bottom: 0px;
     padding: 5px 20px;
     font-size: 25px;
@@ -34,7 +34,7 @@
 .lang-content {
     overflow-y: auto;
     overflow-x: hidden;  
-    border: 3px solid #3BFF31;
+    border: 3px dashed #3BFF31;
     height: calc(100% - 60px); 
     margin: 0 20px;
     padding-top: 10px;

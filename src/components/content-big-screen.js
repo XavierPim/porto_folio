@@ -18,6 +18,7 @@ function ContentBigScreen({ tab_name, children }) {
             </div>
             <div className="scrollable-content">
                 {children}
+            <div className='spacers'>*</div>
             </div>
             <div className="botbar">
                 <div>v1.00</div>

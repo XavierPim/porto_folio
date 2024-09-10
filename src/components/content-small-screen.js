@@ -1,6 +1,5 @@
 import "./content-small-screen.css";
 
-
 function ContentSmallScreen({ section }) {
    const textArray = Array.isArray(section.text) ? section.text : [section.text];
 
@@ -20,7 +19,7 @@ function ContentSmallScreen({ section }) {
             {section.image && (
                <img src={section.image} alt="ascii art" className="small_img" />
             )}
-            
+
             {/* Conditionally render the video if section.video is valid */}
             {section.video && (
                <video width="560" height="315" controls>
@@ -29,18 +28,23 @@ function ContentSmallScreen({ section }) {
                </video>
             )}
 
-         
             <ul className="small_text">
                {textArray.map((item, index) => (
                   <li key={index}>{item}</li>
                ))}
             </ul>
+            
+            {/* Render link only if valid */}
+            {section.link && (
+                  <a href={section.link} target="_blank" rel="noopener noreferrer" className="box-link">
+                  Link </a>
+            )}
          </div>
-         <div className="spacers">*</div>
-         <div className="spacers">*</div>
-         <div className="spacers">*</div>
-         <div className="spacers">*</div>
-         <div className="spacers">*</div>
+         <div className="spacers">⌄</div>
+         <div className="spacers">⌄</div>
+         <div className="spacers">⌄</div>
+         <div className="spacers">⌄</div>
+         <div className="spacers">⌄</div>
       </div>
    );
 }
