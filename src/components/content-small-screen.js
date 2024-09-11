@@ -6,7 +6,7 @@ function ContentSmallScreen({ section }) {
    return (
       <div className="small-container">
          <div className="small-screen">
-            <div className="topbar">
+            <div className="topbar-small">
                <div>{section.window}</div>
             </div>
             <div className="small_title">{section.title}</div>

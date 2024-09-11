@@ -5,7 +5,7 @@
     align-items: center;
 }
 .small-screen {
-	border: 3px solid #3bff31;
+	border: 3px solid #40AE3B;
 	background-color: rgba(30, 30, 30, 0.8);
 	display: flex;
 	flex-direction: column;
@@ -16,9 +16,10 @@
     max-width: 660px;
 }	
 
-.topbar {
+
+.topbar-small {
 	display: flex;
-	background-color: #3bff31;
+	background-color: #40AE3B;
 	align-items: center;
 	color: #2e2e2e;
 	font-size: 24px;
@@ -37,6 +38,9 @@
 	margin: 0px;
 	color: #3BFF31;
 	padding: 0px 10px;
+	text-align: justify;
+	text-wrap: wrap;
+	margin-top: 4px;
 }
 
 
@@ -45,7 +49,7 @@
 	font-size: 20px;
 	text-align: start;
 	padding: 0px 10px;
-	margin: 5px 10px;;
+	margin: 5px 10px;
 }
 
 .small_img {

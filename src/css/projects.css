@@ -34,7 +34,7 @@
 .lang-content {
     overflow-y: auto;
     overflow-x: hidden;  
-    border: 3px double #3BFF31;
+    border: 5px double #d9d9d9;
     height: calc(100% - 60px); 
     margin: 0 20px;
     padding-top: 10px;
