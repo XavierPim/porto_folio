@@ -29,9 +29,9 @@
     font-size: 30px;
     border: 3px solid #3BFF31;
     margin: 0 20px 20px 20px;
-    width: 40%;
     padding: 0 20px 20px 20px;
     transition: text-shadow 0.3s ease, color 0.3s ease;
+
 }
 .email:hover, .linkedin:hover{
     text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;

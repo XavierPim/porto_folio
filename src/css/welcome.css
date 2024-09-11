@@ -1,90 +1,114 @@
-.welcome-container{
-    text-align: center;
-    margin-top: 100x;
-    width: 100dvw;
-    height: 100dvh;
+.welcome-container {
+  text-align: center;
+  width: 100vw;
+  height: 100vh; 
+  position: relative; 
 }
 
-.ascii-art {
-    font-family: monospace;
-    white-space: pre;
-    font-size: 15px;
+.ascii-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none; 
+  opacity: 1;
+  transition: opacity 1s ease-in-out; 
+}
+
+.canvas-hidden {
+  opacity: 0; 
+}
+
+.ascii-art-welcome, .enter, h2, h3 , #typewriter{
+  position: relative;
+  z-index: 1;
+  opacity: 0; 
+  transition: opacity 1s ease-in-out; 
+}
+
+.animation-complete .ascii-art-welcome,
+.animation-complete .enter,
+.animation-complete h2,
+.animation-complete h3,  
+.animation-complete #typewriter{
+  opacity: 1;
 }
 
 #typewriter {
-    overflow: hidden; 
-    border-right: .10em solid #3BFF31; 
-    white-space: nowrap; 
-    margin: 0 auto; 
-    letter-spacing: .01em; 
-    max-width: 9.5em;
-    animation: 
-      typing 3.5s steps(35, end),
-      blink-caret 1s step-end infinite;
-
-}
-
-h1{
-    font-weight: normal;
-    font-size: 50px;
-}
-
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color:#3BFF31; }
-  }
-
-
-.enter{
-    animation: breathing 3s ease-in-out infinite;
-    transition: text-shadow 1s ease-in-out, color 1s ease-in-out;
-    cursor: pointer;
-}
-
-.enter:hover{
-    color: #fff; /* Change text color on hover */
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
-                 0 0 20px rgba(255, 255, 255, 0.6), 
-                 0 0 30px rgba(255, 255, 255, 0.4); 
-
+  overflow: hidden; 
+  border-right: .10em solid #3BFF31; 
+  white-space: nowrap; 
+  margin: 0 auto; 
+  letter-spacing: .01em; 
+  max-width: 9.5em;
+  animation: 
+    typing 12s steps(36, end), 
+    blink-caret 1s step-end infinite;
 }
 
 
-h2{
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    font-size: 45px;
-    font-weight: normal;
-    color: #40AE3B;
-    margin: 0;
+#typewriter.visible {
+  opacity: 1; /* Ensure typewriter is visible during its animation */
 }
 
+h1 {
+  font-weight: normal;
+  font-size: 50px;
+}
+
+.enter {
+  animation: breathing 3s ease-in-out infinite;
+  transition: text-shadow 1s ease-in-out, color 1s ease-in-out;
+  cursor: pointer;
+}
+
+.enter:hover {
+  color: #fff; /* Change text color on hover */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
+               0 0 20px rgba(255, 255, 255, 0.6), 
+               0 0 30px rgba(255, 255, 255, 0.4); 
+}
+
+h2 {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 45px;
+  font-weight: normal;
+  color: #40AE3B;
+  margin: 0;
+}
+
+h3 {
+  position: absolute;
+  bottom: 15px;
+  left: 10px;
+  font-size: 30px;
+  font-weight: normal;
+  color: #40AE3B;
+  margin: 0;
+}
 
 /* Keyframes for breathing effect */
 @keyframes breathing {
-    0% {
-      transform: scale(1); /* Starting scale */
-    }
-    50% {
-      transform: scale(1.05); /* Slightly larger at midpoint */
-    }
-    100% {
-      transform: scale(1); /* Back to original size */
-    }
+  0% {
+    transform: scale(1);
   }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
-h3{
-    position: absolute;
-    bottom: 15px;
-    left: 10px;
-    font-size: 30px;
-    font-weight: normal;
-    color: #40AE3B;
-    margin: 0;
+/* Keyframes for typewriter effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #3BFF31; }
 }

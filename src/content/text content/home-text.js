@@ -1,5 +1,5 @@
 import coder from "../../ascii art/coder";
-import castle from "../../ascii art/castle";
+import crane from "../../ascii art/crane";
 import logos from "../../content/logos.png";
 import hiker from "../../ascii art/hiker";
 const HomeContent = [
@@ -23,7 +23,7 @@ const HomeContent = [
 		subtitle2:"",
 		subtitle3:"",
 		info: "",
-		ascii:castle,
+		ascii:crane,
 		image: "",
 		text: ["software","web applications","teams"], 
 		link: "",

@@ -6,7 +6,7 @@ import ContentSmallScreen from "../components/content-small-screen";
 import HomeContent from "../content/text content/home-text";
 function Home() {
 	const github = "Github";
-	const resume = "Resume";
+	const resume = "Résumé";
 	return (
 		<div className="home-container">
 			<Sidebar />
