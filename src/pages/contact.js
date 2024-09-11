@@ -9,7 +9,7 @@ import Popup from "../components/popup"; // Import the Popup component
 
 function Contact() {
     const email = "royxavierp@gmail.com";
-    const linked = "www.linkedin.com/in/xavier-p-0a5b48132";
+    const linked = "https://www.linkedin.com/in/xavier-p-0a5b48132";
     const [showPopup, setShowPopup] = useState(false);
 
     const copyToClipboard = () => {
