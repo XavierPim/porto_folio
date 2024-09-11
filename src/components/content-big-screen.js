@@ -34,7 +34,6 @@ function ContentBigScreen({ tab_name, children }) {
             <div className="scrollable-content" ref={scrollableRef}>
                 {children}
 
-                {/* Button to scroll back to the top */}
                 {!hideSpacers && (
                     <button onClick={handleScrollToTop}>
                         Back to Top

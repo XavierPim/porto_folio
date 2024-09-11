@@ -1,7 +1,4 @@
-/* =============
-Global Styles
-============= */
-
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap');
 
 
@@ -134,4 +131,20 @@ Content
     .headerInfo > ul {
         font-size: 8px;
     }
+}
+
+button{
+    background-color: #3BFF31;
+    color: #1e1e1e;
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    margin: 3px 6px;
+}
+
+button:hover{
+    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
+    color: white;
+}
+button:active{
+    background-color: #40AE3B;
 }
