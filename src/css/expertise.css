@@ -6,10 +6,5 @@
 }
 
 .UML {
-    width: 100%; 
-    max-width: 630px; 
-    height: auto; 
-    object-fit:cover; 
-    display: block; 
-    margin: 0 auto; 
+    width: 80%;
 }

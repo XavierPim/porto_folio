@@ -18,6 +18,9 @@
 .canvas-hidden {
   opacity: 0; 
 }
+.ascii-art-welcome{
+  font-size: 20px;
+}
 
 .ascii-art-welcome, .enter, h2, h3 , #typewriter{
   position: relative;
@@ -42,7 +45,7 @@
   letter-spacing: .01em; 
   max-width: 15em;
   animation: 
-    typing 8s steps(60, end), 
+    typing 11s steps(50, end), 
     blink-caret 1s step-end infinite;
 }
 
@@ -59,8 +62,8 @@ h1 {
 .enter {
   animation: breathing 3s ease-in-out infinite;
   transition: text-shadow 1s ease-in-out, color 1s ease-in-out;
-  padding: 4px 10px;
-  margin:0 auto;
+  padding: 6px 15px;
+  margin:20px auto 0;
   cursor: pointer;
   background-color: black;
   max-width: 130px;
