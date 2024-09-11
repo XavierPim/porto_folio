@@ -70,7 +70,7 @@ function Welcome() {
 
             <pre className={`ascii-art-welcome ${animationComplete ? 'visible' : ''}`}>{worldMap}</pre>
 
-            <h1 id="typewriter" className={animationComplete ? 'visible' : ''}>Welcome to my portfolio</h1>
+            <h1 id="typewriter" className={animationComplete ? 'visible' : ''}>Hello World! Welcome to my portfolio</h1>
 
             <h1 className={`enter ${animationComplete ? 'visible' : ''}`} onClick={handleEnterClick}>&lt;enter/&gt;</h1>
 
