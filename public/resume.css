@@ -7,13 +7,21 @@
     font-size:  15px;
     line-height: 1.4;
     background-color: white;
+    
 }
+
+body{
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+
 a {
     color: blue;
 }
 
 .spacer {
-    margin: 0px auto;
+    margin:0 auto;
 }
 
 h1, h2, h3, p, li {
@@ -98,8 +106,12 @@ Header
 /* =============
 Content
 ============= */
-.career-highlights > ul > li {
+.list-section > ul > li {
     list-style-type: square;
+}
+
+.list-section{
+    padding-left: 70px;
 }
 
 .company-name {

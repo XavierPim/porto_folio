@@ -13,8 +13,7 @@
     </div>
     <div class="headerInfo">
         <ul>
-            <li>New Westminster, BC, Canada</li>
-            <li><a href="https://github.com/XavierPim" target="_blank" rel="noopener noreferrer">github.com/XavierPim</a></li>
+            <li>New Westminster, Canada</li>
             <li><a href="mailto:royxavierp@gmail.com" target="_blank" rel="noopener noreferrer">royxavierp@gmail.com</a></li>
             <li><a href="https://linkedin.com/in/xavier-pimentel-0a5b48132" target="_blank" rel="noopener noreferrer">linkedin.com/in/xavier-pimentel</a></li>
             <li><a href="https://porto-folio-0w2s.onrender.com/" target="_blank" rel="noopener noreferrer">Portfolio: https://porto-folio-0w2s.onrender.com/</a></li>
@@ -23,24 +22,23 @@
 
     <h2>ENTRY-LEVEL SOFTWARE ENGINEER</h2>
     <div class="role-summary">
-        <ul>
-            <li>Entry-Level Full-Stack developer with experience creating applications in at least 7 languages(see <a href="https://porto-folio-0w2s.onrender.com/">my portfolio</a>)</li>
-            <li>Skilled in building applications with web-based databases and cloud hosting, supporting user authentication.</li>
+        <ul class="list-section">
+            <li>Entry-Level Full-Stack developer with experience creating applications in at least 7 languages(see <a href="https://porto-folio-0w2s.onrender.com/">portfolio</a>)</li>
+            <li>Skilled in building applications with web-based databases and cloud hosting</li>
             <li>Understanding of UI/UX principles and design for developing user-friendly applications</li>       
             <li>Extensive leadership experience as project leader in all academic projects</li>
-            <li>Experienced in personnel management in my previous Hotel career</li>
         </ul>
        
     </div>
     <h2>Education</h2>
-    <ul>
+    <ul class="list-section">
         <li>
             <strong>Computer Systems Technology</strong> - Diploma <br/>
             <em>British Columbia Institute of Technology (BCIT)</em> 2024
         </li>
     </ul>
     <h2>SKILL HIGHLIGHTS</h2>
-    <ul>
+    <ul class="list-section">
         <li><strong>Languages</strong>: C++ | Java | JavaScript | SQL/NoSQL/R | Shell/Bash | Dart | Kotlin | C</li>
         <li><strong>Web/Mobile Development</strong>: React/React-native | Flutter | HTML/CSS | Node.js</li>
         <li><strong>Hosting & Cloud</strong>: MongoDB | Postgres | DigitalOcean | Vercel | Firestore/Firebase | Render</li>
@@ -50,50 +48,39 @@
     <h2>Relevant Projects</h2>
 
     <h3>Map Interface with Natural Text (MINT) | Dart * Flutter <i>(Practicum)</i></h3>
-    <p>- Developed a desktop/mobile app to parse English to control native commands in SARTOPO</p>
-    <p>- Role: Project Lead/Support Developer in charge of start and hand-off of the project</p>
-
+    <ul class="list-section">
+        <li>Developed a desktop/mobile app to parse English to control native commands in SARTOPO</li>
+        <li>Role: Project Lead/Support Developer in charge of start and hand-off of the project</li>
+    </ul>
+    
     <h3>FreeGame App | JSX * React <i>(Practicum)</i></h3>
-    <p>- Developed a peer-to-peer video coaching web app</p>
-    <p>- Role: Created functionality between 3 cloud services that interact with our application</p>
+    <ul class="list-section">
+        <li>Developed a peer-to-peer video coaching web app</li>
+        <li>Role: Created functionality between 3 cloud services that interact with our application</li>
+    </ul>
 
     <h3>Party Group Tracker | JS * Java</h3>
-    <p>- Developed web-based safety friend/group proximity tracker for outings</p>
-    <p>- Role: Lead Developer for functionality, integration, and UI of all modules</p>
+    <ul class="list-section">
+    <li>Developed web-based safety friend/group proximity tracker for outings</li>
+    <li>Role: Lead Developer for functionality, integration, and UI of all modules</li>
+</ul>
 
     <h2>Professional Experience</h2>
 
+
     <h3>Project Lead <span class="spacer"></span> May 2024</h3>
     <p class="company-name">Eagle Eye's Search | Squamish, BC</p>
-    <ul>
+    <ul class="list-section">
         <li>Planned development roadmap which resulted in realization of application from start to finish</li>
         <li>Oversaw all modules and ensured planned system architecture was following the roadmap</li>
     </ul>
 
     <h3>Flight Operations Coordinator (Casual) <span class="spacer"></span> Jan 2023 &mdash; Jun 2023</h3>
     <p class="company-name">Samsic Assistance Canada - AF/KLM | Richmond BC</p>
-    <ul>
+    <ul class="list-section" >
         <li>Processed flight info for Ramp and Pax for smooth on/off loading</li>
-        <li>Found ways to optimize workflow of dated application which helped colleages bypass repetitive tasks</li>
+        <li>Optimized workflow of legacy application leading to colleages bypassing repetitive tasks</li>
     </ul>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script>
-        function generatePDF() {
-            const { jsPDF } = window.jspdf;
-            const doc = new jsPDF();
-            
-            // Get HTML content
-            const resumeContent = document.body.innerHTML;
-
-            // Add HTML content to PDF
-            doc.html(resumeContent, {
-                callback: function (doc) {
-                    doc.save('resume-xavier-pimentel.pdf');
-                },
-                x: 10,
-                y: 10
-            });
-        }
-    </script>
 </body>
 </html>
