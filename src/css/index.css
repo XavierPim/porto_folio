@@ -44,3 +44,7 @@ code {
 .box-link:active {
   background-color: #40AE3B;
 }
+
+p{
+  font-size: 20px;
+}

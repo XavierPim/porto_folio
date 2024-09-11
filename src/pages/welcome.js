@@ -45,14 +45,24 @@ function Welcome() {
 
         const timer = setTimeout(() => {
             clearInterval(interval);
-            setAnimationComplete(true); // Set animation complete
+            setAnimationComplete(true);
         }, 2500); 
+
+        const handleKeyPress = (e) => {
+            if (e.key === 'Enter') {
+                navigate('/home');
+            }
+        };
+
+        // Add event listener for the "Enter" key
+        window.addEventListener('keydown', handleKeyPress);
 
         return () => {
             clearInterval(interval);
             clearTimeout(timer);
+            window.removeEventListener('keydown', handleKeyPress); // Cleanup event listener
         };
-    }, []);
+    }, [navigate]);
 
     return (
         <div className={`welcome-container ${animationComplete ? 'animation-complete' : ''}`}>
@@ -60,7 +70,7 @@ function Welcome() {
 
             <pre className={`ascii-art-welcome ${animationComplete ? 'visible' : ''}`}>{worldMap}</pre>
 
-            <h1 id="typewriter" className={animationComplete ? 'visible' : ''}>Welcome to my Portfolio</h1>
+            <h1 id="typewriter" className={animationComplete ? 'visible' : ''}>Welcome to my portfolio</h1>
 
             <h1 className={`enter ${animationComplete ? 'visible' : ''}`} onClick={handleEnterClick}>&lt;enter/&gt;</h1>
 
