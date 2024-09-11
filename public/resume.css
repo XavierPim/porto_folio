@@ -11,12 +11,15 @@ Global Styles
     line-height: 1.4;
     background-color: white;
 }
+a {
+    color: blue;
+}
 
 .spacer {
     margin: 0px auto;
 }
 
-h1, h2, h3, p, a, li {
+h1, h2, h3, p, li {
     color: black;
 }
 

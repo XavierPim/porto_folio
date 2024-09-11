@@ -52,6 +52,7 @@ function Sidebar() {
                     </NavLink>
                 </li>
             </ul>
+            <a href="https://store.steampowered.com/app/1812820/Bitburner/" className="sidebar-footer" target="_blank" rel="noopener noreferrer">Design inspired by BitBurner</a>
         </div>
     );
 }

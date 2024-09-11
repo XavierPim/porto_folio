@@ -42,7 +42,7 @@
   letter-spacing: .01em; 
   max-width: 9.5em;
   animation: 
-    typing 12s steps(36, end), 
+    typing 10s steps(36, end), 
     blink-caret 1s step-end infinite;
 }
 
