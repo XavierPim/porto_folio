@@ -54,7 +54,7 @@ function Sidebar() {
             </ul>
             <div className="sidebar-footer">
                 <div>
-						<a className="box-link" href="https://github.com/XavierPim" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+						<a className="box-link" href="https://www.linkedin.com/in/xavier-p-0a5b48132" target="_blank" rel="noopener noreferrer">LinkedIn</a>
 						<a className="box-link" href="https://github.com/XavierPim"  target="_blank" rel="noopener noreferrer">Github</a>
                 </div>
             <a href="https://store.steampowered.com/app/1812820/Bitburner/"  className="sidebar-footer-link" target="_blank" rel="noopener noreferrer">Design inspired by BitBurner</a>

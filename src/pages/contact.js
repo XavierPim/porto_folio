@@ -9,7 +9,7 @@ import Popup from "../components/popup"; // Import the Popup component
 
 function Contact() {
     const email = "royxavierp@gmail.com";
-    const linked = "https://www.linkedin.com/in/xavier-pimentel-0a5b48132/";
+    const linked = "https://www.linkedin.com/in/xavier-p-0a5b48132";
     const [showPopup, setShowPopup] = useState(false);
 
     const copyToClipboard = () => {
@@ -45,7 +45,7 @@ function Contact() {
                         </a>
                     </div>
 
-                    <div className="phone">
+                    <div className="contact-footer">
                         <p> Please connect through <a href={`mailto:${email}?subject=Request%20for%20phone%20number`} className="box-link">email</a> or reach out through <a href={linked} target="_blank" rel="noopener noreferrer" className="box-link">LinkedIn</a></p>
                     </div>
                 </ContentBigScreen>

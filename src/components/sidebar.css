@@ -41,18 +41,16 @@
 .navbar_ul>li>*{
     font-size: 30px;
     display: flex; 
-    justify-content: space-between; 
+    justify-content:flex-start; 
     align-items: center; 
     color:#40AE3B;
     width: 100%;
-    padding: 0 5px;
+    padding: 0 10px;
     margin:0 2px;
 }
 
-.navbar_ul>li>img{
-    width: 120px;
-    height: 120px;
-    margin:0
+.navbar_ul>li>a>img{
+    margin:0 10px;
 }
 
 
@@ -60,7 +58,6 @@
     background-color: #3BFF31;
     color: #2e2e2e;
     height: 100%;
-    padding: 6px;
     box-sizing:border-box ;
 }
 
