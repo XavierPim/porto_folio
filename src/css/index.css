@@ -6,7 +6,7 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100dvh; 
-  width: 100%;
+  width: 100dvw;
   font-family: 'VT323', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
