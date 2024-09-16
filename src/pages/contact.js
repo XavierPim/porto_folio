@@ -26,10 +26,10 @@ function Contact() {
             <div className="content-container" id="contact-big-parent">
                 <ContentBigScreen tab_name={tabs.contact}>
                     <div className="email">
-                        <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${email}`} 
-                           target="_blank" 
-                           rel="noopener noreferrer" 
-                           className="contact-link">
+                        <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${email}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="contact-link">
                             <pre>{emailart}</pre>
                             Email me: {email}
                         </a>
@@ -46,7 +46,10 @@ function Contact() {
                     </div>
 
                     <div className="contact-footer">
-                        <p> Please connect through <a href={`mailto:${email}?subject=Request%20for%20phone%20number`} className="box-link">email</a> or reach out through <a href={linked} target="_blank" rel="noopener noreferrer" className="box-link">LinkedIn</a></p>
+                        <p> Please connect through
+                        <a href={`mailto:${email}?subject=Request%20for%20phone%20number`} className="box-link">email</a></p>
+                        <p>or reach out through
+                        <a href={linked} target="_blank" rel="noopener noreferrer" className="box-link">LinkedIn</a></p> 
                     </div>
                 </ContentBigScreen>
             </div>

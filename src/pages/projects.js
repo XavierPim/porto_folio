@@ -113,8 +113,8 @@ function Projects() {
                         <div className="lang-content"
 						  style={{
 							backgroundImage: `url(${getBackgroundForTab()})`,
-							backgroundSize:'30%',
-							backgroundPosition: 'calc(50% + 100px) center',
+							backgroundSize:'40%',
+							backgroundPosition: 'center',
 							backgroundRepeat: 'no-repeat',
 							backgroundAttachment: 'fixed',
 						}}>{renderContent()}</div>

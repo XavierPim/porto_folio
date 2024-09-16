@@ -32,6 +32,11 @@ video{
 		margin: 20px 5px 0;
 		max-width: 660px;
 	}
+
+	
+.topbar-small {
+	font-size: 17px;
+}
 	
 .small_title {
 	font-size: 15px;
