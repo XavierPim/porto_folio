@@ -23,17 +23,17 @@
 }
 
 .linkedin>a>pre {
-    font-size: 8px;
+    font-size: 7px;
 }
 
 .email,
 .linkedin {
-    font-size: 30px;
+    font-size: 18px;
     border: 3px solid #3BFF31;
-    margin: 0 20px 20px 20px;
-    padding: 0 20px 20px 20px;
+    margin: 6px;
+    padding: 5px;
     transition: text-shadow 0.3s ease, color 0.3s ease;
-    width: 300px;
+    min-width: 240px;
 
 }
 
@@ -46,7 +46,6 @@
 a {
     color: #3BFF31;
     text-decoration: none;
-    margin: 10px;
     font-size: 15px;
 }
 
@@ -66,8 +65,4 @@ button:hover {
 
 button:active {
     background-color: #40AE3B;
-}
-
-.contact-footer {
-    bottom: 20px;
 }
