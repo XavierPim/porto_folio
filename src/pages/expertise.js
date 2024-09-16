@@ -2,7 +2,6 @@ import "../css/expertise.css";
 import Sidebar from "../components/sidebar";
 import ContentBigScreen from "../components/content-big-screen";
 import tabs from "../content/text content/nav-tabs";
-import UML from "../content/logos.png";
 function Expertise() {
 	return (
 		<div className="expertise-container">

@@ -74,8 +74,10 @@ function Welcome() {
 
             <h1 className={`enter ${animationComplete ? 'visible' : ''}`} onClick={handleEnterClick}>&lt;enter/&gt;</h1>
 
+        <div>
             <h2 className={`${animationComplete ? 'visible' : ''}`}>Xavier Pimentel</h2>
             <h3 className={`${animationComplete ? 'visible' : ''}`}>A Software Developer</h3>
+            </div>
         </div>
     );
 }
