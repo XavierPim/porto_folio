@@ -4,7 +4,9 @@
 	height: 100%;
 	display: flex;
 	flex-direction: column;
+	overflow-y: auto;
 }
+
 .topbar {
 	display: flex;
 	justify-content: space-between;
@@ -51,32 +53,38 @@
 
 .page_title {
 	align-self: center;
-	padding: 15px;
-	max-width: 200px;
-	font-size: 30px;
+	padding: 10px;
+	max-width: 180px;
 	border: 2px solid #3bff31;
 	margin: 10px;
 }
 
 
-a .page_title {
-	align-self: center;
-	padding: 15px;
-	max-width: 200px;
-	font-size: 30px;
-	border: 2px solid #3bff31;
-	margin: 10px;
-}
 
 .spacers{
-    font-size: 3em;
+	font-size: 3em;
 }
 
 .botbar{
-    display: flex;
+	display: flex;
 	background-color: #3bff31;
 	color: #2e2e2e;
 	font-size: 13px;
 	width: 100%;
 }
 
+
+
+
+
+@media only screen and (min-width: 769px) {
+	.page_title {
+		font-size: 30px;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.page_title {
+		font-size: 16px;
+	}
+
+}
