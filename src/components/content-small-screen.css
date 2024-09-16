@@ -39,8 +39,8 @@ video{
 }
 	
 .small_title {
-	font-size: 15px;
-	margin: 0px;
+	font-size: 18px;
+	margin: 4px 4px 0;
 	text-decoration: underline;
 }
 
@@ -90,7 +90,7 @@ video{
 }
 .small_title {
 	font-size: 27px;
-	margin: 0px;
+	margin: 10px 5px 0;
 	text-decoration: underline;
 }
 

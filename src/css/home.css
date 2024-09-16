@@ -12,9 +12,7 @@
 	.home-content-container {
         background-color: black;
         flex: 1;
-        padding: 10px;
         font-size: 13px;
-        margin:auto 2px;
     }
 }
 @media only screen and (min-width: 769px) {
