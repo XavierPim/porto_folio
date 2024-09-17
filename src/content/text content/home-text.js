@@ -31,7 +31,7 @@ const HomeContent = [
 	{
 		window: "coding/",
 		title: "-CODING-",
-		subtitle: "A full-stack developer with at least 6 languages under my belt.",
+		subtitle: "A full-stack developer in multiple languages.",
 		subtitle1:"",
 		subtitle2:"",
 		subtitle3:"",
