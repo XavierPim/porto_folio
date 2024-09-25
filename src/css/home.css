@@ -1,17 +1,30 @@
 .home-container {
     display: flex; 
     width: 100%; 
-    height: 100%; 
+    height: 100dvh;
     box-sizing: border-box; 
 }
 
 
-.home-content-container {
-    background-color: black;
-    flex: 2;
-    padding: 20px;
+
+
+@media only screen and (max-width: 768px) {
+	.home-content-container {
+        background-color: black;
+        flex: 1;
+        font-size: 13px;
+    }
+}
+@media only screen and (min-width: 769px) {
+	.home-content-container {
+        background-color: black;
+        flex: 2;
+        padding: 20px;
+    
+    }
 }
 
 #homeContent{
     padding: 20px;
 }
+

@@ -6,5 +6,14 @@
 }
 
 .UML {
-    width: 80%;
+    width: 100%;
+    height: 100%;
+    background-image: url('../content/Expertise_UML.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.expertise-container>.content-container>div>.scrollable-content{
+    overflow-y:hidden;
 }

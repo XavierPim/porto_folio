@@ -5,8 +5,8 @@
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%; /* Change this to 100% */
-  width: 100%;
+  height: 100dvh; 
+  width: 100dvw;
   font-family: 'VT323', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -23,6 +23,7 @@ code {
   flex: 2;
   padding: 20px;
   box-sizing: border-box;
+  overflow-y: hidden;
 }
 
 .box-link{
