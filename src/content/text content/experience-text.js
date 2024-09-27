@@ -30,7 +30,7 @@ const experienceContent = [
     {
         window: "practicum_2/",
         title: "PRACTICUM 2 - FreeGame App",
-        subtitle: "ShowTime Digital Inc",
+        subtitle: "Showtime Digital Ltd",
         subtitle2: "Role: Lead Back-end developer",
         info: "JAN - APR 2024 | Vancouver ",
         image: "",
