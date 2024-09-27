@@ -304,18 +304,22 @@ export const cText = [
 	},
 ];
 
-export const leetText = [
+export const wipText = [
 	{
-		window: "work in progress/",
-		title: "WORK IN PROGRESS",
-		subtitle: "",
-		subtitle1: "",
+		window: "redoUmbrella/",
+		title: "Redeveloping Umbrella",
+		subtitle: "Night-out Party Tracker in ASP.NET Server",
+		subtitle1: "Originally made in JavaScript and raw HTML/CSS",
 		subtitle2: "",
 		subtitle3: "",
-		info: "",
+		info: "Recreating project with the following features:",
 		ascii: "",
 		image: "",
-		text: [],
-		link: "",
+		text: [
+			"Client:React/React-Native",
+			"Server:ASP.NET",
+			"Datebase: MySQL",
+		],
+		link: "https://github.com/XavierPim/Umbrella_Server.git",
 	},
 ];
