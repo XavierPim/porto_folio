@@ -27,7 +27,7 @@ function Projects() {
                 return dartText;
             case "c":
                 return cText;
-            case "WIP":
+            case "wip":
                 return wipText;
             default:
                 return [];
@@ -104,10 +104,10 @@ function Projects() {
                                 c/
                             </div>
                             <div
-                                onClick={() => setActiveTab("WIP")}
-                                className={activeTab === "WIP" ? "active-tab" : ""}
+                                onClick={() => setActiveTab("wip")}
+                                className={activeTab === "wip" ? "active-tab" : ""}
                             >
-                                workInProgress/
+                                wip/
                             </div>
                         </div>
                         <div className="lang-content"
