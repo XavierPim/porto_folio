@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';  // Import axios for making API requests
 import worldMap from "../ascii art/map";
 import '../css/welcome.css';
 
 function Welcome() {
     const navigate = useNavigate();
     const [animationComplete, setAnimationComplete] = useState(false);
+    const [ip, setIp] = useState(''); // State to hold the user's IP address
 
     const handleEnterClick = () => {
         navigate('/home');
@@ -14,7 +16,7 @@ function Welcome() {
     useEffect(() => {
         const canvas = document.querySelector('canvas');
         const ctx = canvas.getContext('2d');
-        
+
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 
@@ -57,10 +59,19 @@ function Welcome() {
         // Add event listener for the "Enter" key
         window.addEventListener('keydown', handleKeyPress);
 
+        // Fetch user's IP address
+        axios.get('https://api.ipify.org?format=json')
+            .then(response => {
+                setIp(response.data.ip); // Set IP address state
+            })
+            .catch(error => {
+                console.error('Error fetching the IP address:', error);
+            });
+
         return () => {
             clearInterval(interval);
             clearTimeout(timer);
-            window.removeEventListener('keydown', handleKeyPress); // Cleanup event listener
+            window.removeEventListener('keydown', handleKeyPress);
         };
     }, [navigate]);
 
@@ -72,11 +83,15 @@ function Welcome() {
 
             <h1 id="typewriter" className={animationComplete ? 'visible' : ''}>Hello World! Welcome to my portfolio</h1>
 
+            <h1 className={animationComplete ? 'visible' : ''}>
+                {ip ? `Access: ${ip}` : 'Fetching IP...'}
+            </h1>
+
             <h1 className={`enter ${animationComplete ? 'visible' : ''}`} onClick={handleEnterClick}>&lt;enter/&gt;</h1>
 
-        <div>
-            <h2 className={`${animationComplete ? 'visible' : ''}`}>Xavier Pimentel</h2>
-            <h3 className={`${animationComplete ? 'visible' : ''}`}>A Software Developer</h3>
+            <div>
+                <h2 className={`${animationComplete ? 'visible' : ''}`}>Xavier Pimentel</h2>
+                <h3 className={`${animationComplete ? 'visible' : ''}`}>A Software Developer</h3>
             </div>
         </div>
     );
