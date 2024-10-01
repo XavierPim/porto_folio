@@ -76,6 +76,10 @@ li {
 /* =============
 Header
 ============= */
+.headerTitle {
+    display: flex;
+    justify-content: center;
+}
 
 .headerInfo {
     margin-bottom: 6px;
@@ -95,7 +99,7 @@ Header
 }
 
 .headerInfo > ul > li:not(:last-child) {
-    margin-right: 8px;
+    margin-right: 1px;
 }
 
 .headerInfo > ul > li:not(:last-child):after {
