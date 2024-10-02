@@ -27,7 +27,9 @@ a {
 h1, h2, h3, p, li {
     color: black;
 }
-
+.resumeBody>*{
+font-size: 0.9em;
+}
 
 h1 {
     text-align: center;
