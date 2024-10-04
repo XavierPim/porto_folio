@@ -7,7 +7,7 @@ import '../css/welcome.css';
 function Welcome() {
     const navigate = useNavigate();
     const [animationComplete, setAnimationComplete] = useState(false);
-    const [ip, setIp] = useState(''); // State to hold the user's IP address
+    const [location, setLocation] = useState(''); // State to hold user's city and country
 
     const handleEnterClick = () => {
         navigate('/home');
@@ -59,13 +59,16 @@ function Welcome() {
         // Add event listener for the "Enter" key
         window.addEventListener('keydown', handleKeyPress);
 
-        // Fetch user's IP address
-        axios.get('https://api.ipify.org?format=json')
+        // Fetch user's location using ipinfo.io with API key from .env
+        const apiKey = process.env.REACT_APP_IPINFO_API_KEY; // Get API key from .env
+
+        axios.get(`https://ipinfo.io?token=${apiKey}`)
             .then(response => {
-                setIp(response.data.ip); // Set IP address state
+                const { city, country } = response.data;
+                setLocation(`Access: ${city}, ${country}`); // Set city and country
             })
             .catch(error => {
-                console.error('Error fetching the IP address:', error);
+                console.error('Error fetching location:', error);
             });
 
         return () => {
@@ -84,7 +87,7 @@ function Welcome() {
             <h1 id="typewriter" className={animationComplete ? 'visible' : ''}>Hello World! Welcome to my portfolio</h1>
 
             <h1 className={animationComplete ? 'visible' : ''}>
-                {ip ? `Access: ${ip}` : 'Fetching IP...'}
+                {location ? location : 'Fetching location...'}
             </h1>
 
             <h1 className={`enter ${animationComplete ? 'visible' : ''}`} onClick={handleEnterClick}>&lt;enter/&gt;</h1>
