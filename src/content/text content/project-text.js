@@ -7,6 +7,8 @@ import genetic from "../project-cplus/genetic.png"
 import poly from "../project-cplus/inheritance-polymorph.png"
 import course from "../project-cplus/course-conflict.png"
 import library from "../project-cplus/library.png"
+import chatserver from "../project-c/multiclient.png"
+import ncruses from "../project-c/ncruses.png"
 
 
 // javascript images/videos
@@ -226,16 +228,16 @@ export const dartText = [
 
 export const cText = [
     {
-		window: "ncurses_game_server_IPV_4|6/",
-		title: "Online multiplayer ncurses based game.",
+		window: "ncurses_game_server_UDP",
+		title: "UDP based ncurses live broadcasting",
 		subtitle:
-			"Description: a server using shell that can accept multiple users and show a UI of each player rendered in ncurses.",
+			"Description: a UDP server using shell that can accept multiple users and show a UI of each player rendered in ncurses.",
 		subtitle1: "",
 		subtitle2: "",
 		subtitle3: "",
 		info: "Features:",
 		ascii: "",
-		image: "",
+		image: ncruses,
 		text: [
 			"Self start server activation",
 			"Global UI updates showing each player positions",
@@ -254,7 +256,7 @@ export const cText = [
 		subtitle3: "",
 		info: "Features:",
 		ascii: "",
-		image: "",
+		image: chatserver,
 		text: [
 			"Self start server activation",
 			"Remote start server activation",
