@@ -27,6 +27,7 @@ const cplus_link = "https://github.com/XavierPim/c_plusplus.git";
 const ncurse_link = "https://github.com/XavierPim/Multi_user-Ncurses-IPV-4_6.git";
 const shell_link = "https://github.com/XavierPim/RemoteShell_IPV4.git";
 const umbrella_link = "https://umbrellabby15.web.app/";
+const chat_link = "https://github.com/XavierPim/Multi-Client_Chat_Server_IPv4_6.git";
 
 export const cplusplusText = [
 	{
@@ -267,7 +268,7 @@ export const cText = [
 			"Users features like change name, whisper, and leave",
 			"Multi-OS support: Ubuntu, MacOS, Fedora",
 		],
-		link: "",
+		link: chat_link,
 	},
 	{
 		window: "remote_shell_IPv_4",
