@@ -279,7 +279,7 @@ export const cText = [
 		subtitle3: "",
 		info: "Features:",
 		ascii: "",
-		image: "",
+		image: shell,
 		text: [
 			"Users can run most Unix-based commands that call execv()",
 			"Multi-OS support: Ubuntu, MacOS, Fedora",
@@ -298,7 +298,7 @@ export const cText = [
 		subtitle3: "",
 		info: "Features:",
 		ascii: "",
-		image: shell,
+		image: "",
         text: [
 			"Self start server activation",
 			"Users can run most Unix-based commands that call execv()",
