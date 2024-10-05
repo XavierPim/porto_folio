@@ -9,6 +9,8 @@ import course from "../project-cplus/course-conflict.png"
 import library from "../project-cplus/library.png"
 import chatserver from "../project-c/multiclient.png"
 import ncruses from "../project-c/ncruses.png"
+import shell from "../project-c/remote.png"
+
 
 
 // javascript images/videos
@@ -296,7 +298,7 @@ export const cText = [
 		subtitle3: "",
 		info: "Features:",
 		ascii: "",
-		image: "",
+		image: shell,
         text: [
 			"Self start server activation",
 			"Users can run most Unix-based commands that call execv()",
