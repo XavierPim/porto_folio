@@ -60,13 +60,13 @@ function Welcome() {
         window.addEventListener('keydown', handleKeyPress);
 
         // Fetch user's IP address
-        axios.get('https://api.ipify.org?format=json')
-            .then(response => {
-                setIp(response.data.ip); // Set IP address state
-            })
-            .catch(error => {
-                console.error('Error fetching the IP address:', error);
-            });
+        // axios.get('https://api.ipify.org?format=json')
+        //     .then(response => {
+        //         setIp(response.data.ip); // Set IP address state
+        //     })
+        //     .catch(error => {
+        //         console.error('Error fetching the IP address:', error);
+        //     });
 
         return () => {
             clearInterval(interval);
@@ -83,9 +83,9 @@ function Welcome() {
 
             <h1 id="typewriter" className={animationComplete ? 'visible' : ''}>Hello World! Welcome to my portfolio.</h1>
 
-            <h1 className={animationComplete ? 'visible' : ''}>
+            {/* <h1 className={animationComplete ? 'visible' : ''}>
                 {ip ? `Access: ${ip}` : 'Fetching IP'}
-            </h1>
+            </h1> */}
 
             <h1 className={`enter ${animationComplete ? 'visible' : ''}`} onClick={handleEnterClick}>&lt;enter/&gt;</h1>
 
