@@ -41,7 +41,7 @@ function ContentBigScreen({ tab_name, children }) {
                 )}
             </div>
             <div className="botbar">
-                <div>v1.00</div>
+                <div>v1.04</div>
             </div>
         </div>
     );
