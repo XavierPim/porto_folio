@@ -2,8 +2,8 @@ import "../css/home.css";
 import Sidebar from "../components/sidebar";
 import ContentBigScreen from "../components/content-big-screen";
 import tabs from "../content/text content/nav-tabs";
-// import ContentSmallScreen from "../components/content-small-screen";
-// import HomeContent from "../content/text content/home-text";
+import ContentSmallScreen from "../components/content-small-screen";
+import HomeContent from "../content/text content/home-text";
 function Home() {
 	const github = "Github";
 	const resume = "Résumé";
@@ -18,10 +18,9 @@ function Home() {
 							{resume}
 						</a>
 					</div>
-					<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=XavierPim&layout=compact&theme=dark" alt="Xavier Pimentel's Most Used Languages" />
-					{/* {HomeContent.map((section, index) => (
+					{HomeContent.map((section, index) => (
 						<ContentSmallScreen key={index} section={section} />
-					))} */}
+					))}
 				</ContentBigScreen>
 			</div>
 		</div>
