@@ -1,6 +1,6 @@
 import coder from "../../ascii art/coder";
 import crane from "../../ascii art/crane";
-import gitStats from "https://github-readme-stats.vercel.app/api/top-langs/?username=XavierPim&layout=compact&theme=dark";
+import logos from "../../content/logos.png";
 import hiker from "../../ascii art/hiker";
 const HomeContent = [
 	{
@@ -29,7 +29,7 @@ const HomeContent = [
 		subtitle: ["A full-stack developer in multiple languages."],
 		info: "",
 		ascii:"",
-		image: gitStats,
+		image: logos,
 		text: "Recent graduate but already have done 5 medium-sized projects.", 
 		link: "",
 	},
