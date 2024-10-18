@@ -1,13 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';  // Import axios for making API requests
 import worldMap from "../ascii art/map";
 import '../css/welcome.css';
 
 function Welcome() {
     const navigate = useNavigate();
     const [animationComplete, setAnimationComplete] = useState(false);
-    const [ip, setIp] = useState(''); // State to hold the user's IP address
 
     const handleEnterClick = () => {
         navigate('/home');
@@ -59,14 +57,6 @@ function Welcome() {
         // Add event listener for the "Enter" key
         window.addEventListener('keydown', handleKeyPress);
 
-        // Fetch user's IP address
-        // axios.get('https://api.ipify.org?format=json')
-        //     .then(response => {
-        //         setIp(response.data.ip); // Set IP address state
-        //     })
-        //     .catch(error => {
-        //         console.error('Error fetching the IP address:', error);
-        //     });
 
         return () => {
             clearInterval(interval);
