@@ -58,13 +58,13 @@ margin-top: 10px;
 	width: 80%;
 	border: 2px solid #D9D9D9;
 	padding: 2px;
-	margin: 7px
+	margin: 12px
 }
 
 @media only screen and (max-width: 768px) {
 	.small-screen {
 		margin: 20px 5px 0;
-		max-width: 660px;
+		max-width:90%
 	}
 
 	
@@ -96,8 +96,8 @@ margin-top: 10px;
 }
 
 .small_ascii {
-	/* font-size: 7px;
-	padding: 15px; */
+	font-size: 4px;
+	padding: 15px;
 }
 }
 

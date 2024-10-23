@@ -1,7 +1,8 @@
 import coder from "../../ascii art/coder";
 import crane from "../../ascii art/crane";
-import logos from "../../content/logos.png";
 import hiker from "../../ascii art/hiker";
+const gitStats  = "https://github-readme-stats.vercel.app/api/top-langs/?username=XavierPim&layout=compact&theme=dark";
+const leet  = "https://leetcard.jacoblin.cool/XavierP?theme=dark";
 const HomeContent = [
 	{
 		window: "greeting/",
@@ -18,8 +19,8 @@ const HomeContent = [
 		title: "-PASSION-",
 		subtitle: ["I like building things:"],
 		info: "",
-		ascii:crane,
-		image: "",
+		ascii:"",
+		image: leet,
 		text: ["software","web applications","teams"], 
 		link: "",
 	},
@@ -29,7 +30,7 @@ const HomeContent = [
 		subtitle: ["A full-stack developer in multiple languages."],
 		info: "",
 		ascii:"",
-		image: logos,
+		image: gitStats,
 		text: "Recent graduate but already have done 5 medium-sized projects.", 
 		link: "",
 	},
