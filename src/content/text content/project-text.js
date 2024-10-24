@@ -23,6 +23,11 @@ import mint from "../project-dart/mint.png"
 import mintDemo from "../project-dart/mint-small.mp4"
 
 //links
+
+const leetUser= "leetcode.com/u/XavierP/"
+const leetLink  = "https://github.com/XavierPim/Leet.git"
+const leetCard= "https://leetcard.jacoblin.cool/XavierP?theme=dark";
+
 const cplus_link = "https://github.com/XavierPim/c_plusplus.git";
 const ncurse_link = "https://github.com/XavierPim/Multi_user-Ncurses-IPV-4_6.git";
 const shell_link = "https://github.com/XavierPim/RemoteShell_IPV4.git";
@@ -284,5 +289,15 @@ export const wipText = [
 			"Database: MySQL",
 		],
 		link: "https://github.com/XavierPim/Umbrella_Server.git",
+	},
+	{
+		window: "compLeetCode/",
+		title: "Complete LeetCode in C++",
+		subtitle: ["LeetCode with proper headers, classes, architecture"],
+		info: "user:  "+ leetUser,
+		ascii: "",
+		image: leetCard,
+		text: [],
+		link: leetLink,
 	},
 ];

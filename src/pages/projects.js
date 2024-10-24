@@ -8,7 +8,7 @@ import ContentSmallScreen from "../components/content-small-screen";
 import cplusBG from "../content/project-cplus/cplus.png";
 import cBG from "../content/project-c/c.png";
 import jsBG from "../content/project-js/js.png";
-import leetBG from "../content/project-WIP/WIP.png";
+import wipBG from "../content/project-WIP/WIP.png";
 import dartBG from "../content/project-dart/dart.png";
 
 function Projects() {
@@ -27,7 +27,7 @@ function Projects() {
                 return dartText;
             case "c":
                 return cText;
-            case "wip":
+            case "workInProgress":
                 return wipText;
             default:
                 return [];
@@ -45,9 +45,9 @@ function Projects() {
             case "c":
                 return cBG;
             case "WIP":
-                return leetBG;
+                return wipBG;
             default:
-                return ""; // default background or no background
+                return ""; 
         }
     };
 
@@ -104,8 +104,8 @@ function Projects() {
                                 c/
                             </div>
                             <div
-                                onClick={() => setActiveTab("wip")}
-                                className={activeTab === "wip" ? "active-tab" : ""}
+                                onClick={() => setActiveTab("workInProgress")}
+                                className={activeTab === "workInProgress" ? "active-tab" : ""}
                             >
                                 wip/
                             </div>

@@ -27,7 +27,7 @@ const HomeContent = [
 	{
 		window: "coding/",
 		title: "-CODING-",
-		subtitle: ["- A full-stack developer in multiple languages."," - Recent grad with 5 medium-sized projects"],
+		subtitle: ["A full-stack developer in multiple languages.","Recent grad with 5 medium-sized projects"],
 		info: "",
 		ascii:"",
 		image: gitStats,
@@ -37,7 +37,7 @@ const HomeContent = [
 	{
 		window: "collaborator/",
 		title: "-COLLABORATOR-",
-		subtitle: ["-Hike organizer for friends and colleagues,", "-focusing on creating opportunities for new experiences."],
+		subtitle: ["Hike organizer for friends and colleagues,", "where I enjoy bringing people around me to higher places"],
 		info: "",
 		ascii:hiker,
 		image: "",
