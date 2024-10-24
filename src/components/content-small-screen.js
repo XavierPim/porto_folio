@@ -49,7 +49,7 @@ function ContentSmallScreen({ section }) {
 
             {/* Conditionally render the video if it exists */}
             {section.video && (
-               <video width="560" height="315" controls>
+               <video width="560" height="315" controls className="small_vid">
                   <source src={section.video} type="video/mp4" />
                   Your browser does not support the video tag.
                </video>
