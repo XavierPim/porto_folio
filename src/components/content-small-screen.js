@@ -70,8 +70,6 @@ function ContentSmallScreen({ section }) {
 
          {/* Optional spacers, can remove or conditionally render these if needed */}
          <div className="spacers">⌄</div>
-         <div className="spacers">⌄</div>
-         <div className="spacers">⌄</div>
       </div>
    );
 }
