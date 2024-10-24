@@ -21,7 +21,7 @@ const HomeContent = [
 		info: "",
 		ascii:"",
 		image: leet,
-		text: ["Software","Web Applications","Teams","Current LeetCode stats:"], 
+		text: ["Software","Web Applications","Teams","Current LeetCode Progress:"], 
 		link: "",
 	},
 	{
@@ -35,9 +35,9 @@ const HomeContent = [
 		link: "",
 	},
 	{
-		window: "charisma/",
-		title: "-CHARISMA-",
-		subtitle: ["Hike organizer for friends and colleagues, focusing on creating opportunities for new experiences."],
+		window: "collaborator/",
+		title: "-COLLABORATOR-",
+		subtitle: ["-Hike organizer for friends and colleagues,", "-focusing on creating opportunities for new experiences."],
 		info: "",
 		ascii:hiker,
 		image: "",
