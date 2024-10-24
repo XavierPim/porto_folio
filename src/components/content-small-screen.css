@@ -98,7 +98,7 @@ margin-top: 10px;
 @media only screen and (min-width: 769px) {
 .small-screen {
 	margin: 20px 0 0;
-	min-width:400px;
+	min-width:450px;
     max-width: 550px;
 }
 .small_title {

@@ -1,6 +1,7 @@
 import coder from "../../ascii art/coder";
-import crane from "../../ascii art/crane";
-import hiker from "../../ascii art/hiker";
+// import crane from "../../ascii art/crane";
+// import hiker from "../../ascii art/hiker";
+import hiking from "../hiking.jpg"
 const gitStats  = "https://github-readme-stats.vercel.app/api/top-langs/?username=XavierPim&layout=compact&theme=dark";
 const leet  = "https://leetcard.jacoblin.cool/XavierP?theme=dark";
 const HomeContent = [
@@ -39,8 +40,8 @@ const HomeContent = [
 		title: "-COLLABORATOR-",
 		subtitle: ["Hike organizer for friends and colleagues,", "where I enjoy bringing people around me to higher places"],
 		info: "",
-		ascii:hiker,
-		image: "",
+		ascii:"",
+		image: hiking,
 		text: "A mindset that extends to my work with development teams, where I consistently encourage innovation in our projects.", 
 		link: "",
 	}
