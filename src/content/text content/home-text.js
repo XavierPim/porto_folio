@@ -2,7 +2,7 @@ import coder from "../../ascii art/coder";
 // import crane from "../../ascii art/crane";
 // import hiker from "../../ascii art/hiker";
 import hiking from "../hiking.jpg"
-const gitStats  = "https://github-readme-stats.vercel.app/api/top-langs/?username=XavierPim&layout=compact&theme=dark";
+const gitStats  = "https://github-readme-stats.vercel.app/api/top-langs/?username=XavierPim&layout=compact&theme=dark&hide=shell,cmake";
 const leet  = "https://leetcard.jacoblin.cool/XavierP?theme=dark";
 const HomeContent = [
 	{
