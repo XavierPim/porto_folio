@@ -44,7 +44,7 @@ function ContentSmallScreen({ section }) {
 
             {/* Conditionally render the image */}
             {section.image && (
-               <img src={section.image} alt="ascii art" className="small_img" />
+               <img src={section.image} alt="External api currently down" className="small_img" />
             )}
 
             {/* Conditionally render the video if it exists */}
