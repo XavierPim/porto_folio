@@ -1,79 +1,67 @@
+import React, { useState, useEffect } from "react";
 import "./content-small-screen.css";
 
 function ContentSmallScreen({ section }) {
-   const textArray = Array.isArray(section.text) ? section.text : [section.text];
-   const subtitlesArray = Array.isArray(section.subtitle) ? section.subtitle : [];
+	const textArray = Array.isArray(section.text) ? section.text : [section.text];
+	const subtitlesArray = Array.isArray(section.subtitle) ? section.subtitle : [];
+	const [imageSrc, setImageSrc] = useState(section.image); // Initialize with the default image
 
-   return (
-      <div className="small-container">
-         <div className="small-screen">
-            {/* Conditionally render window title if it exists */}
-            {section.window && (
-               <div className="topbar-small">
-                  <div>{section.window}</div>
-               </div>
-            )}
+	useEffect(() => {
+		// Check if the image loads successfully
+		const img = new Image();
+		img.src = section.image;
+		img.onload = () => setImageSrc(section.image); // If successful, keep the API image
+		img.onerror = () => setImageSrc(section.fallbackImage); // Use fallback if API fails
+	}, [section.image, section.fallbackImage]);
 
-            {/* Conditionally render the main title */}
-            {section.title && (
-               <div className="small_title">{section.title}</div>
-            )}
+	return (
+		<div className="small-container">
+			<div className="small-screen">
+				<div className="topbar-small">
+					<div>{section.window}</div>
+				</div>
+				<div className="small_title">{section.title}</div>
 
-            {/* Conditionally render subtitles only if they exist */}
-            {subtitlesArray.length > 0 && (
-               <ul className="small_sub_title">
-                  {subtitlesArray.map((item, index) => (
-                     <li key={index}>{item}</li>
-                  ))}
-               </ul>
-            )}
+				{/* Render subtitles dynamically */}
+				<ul className="small_sub_title">
+					{subtitlesArray.map((item, index) => (
+						<li key={index}>{item}</li>
+					))}
+				</ul>
 
-            {/* Conditionally render the info block */}
-            {section.info && (
-               <div className="small_info">{section.info}</div>
-            )}
+				<div className="small_info">{section.info}</div>
 
-            {/* Conditionally render the text list if it has content */}
-            {textArray.length > 0 && (
-               <ul className="small_text">
-                  {textArray.map((item, index) => (
-                     <li key={index}>{item}</li>
-                  ))}
-               </ul>
-            )}
+				<ul className="small_text">
+					{textArray.map((item, index) => (
+						<li key={index}>{item}</li>
+					))}
+				</ul>
 
-            {/* Conditionally render the image */}
-            {section.image && (
-               <img src={section.image} alt="External api currently down" className="small_img" />
-            )}
+				{/* Conditionally render the image */}
+				{imageSrc && <img src={imageSrc} alt="section visual" className="small_img" />}
 
-            {/* Conditionally render the video if it exists */}
-            {section.video && (
-               <video width="560" height="315" controls className="small_vid">
-                  <source src={section.video} type="video/mp4" />
-                  Your browser does not support the video tag.
-               </video>
-            )}
+				{/* Conditionally render the video */}
+				{section.video && (
+					<video width="560" height="315" controls>
+						<source src={section.video} type="video/mp4" />
+						Your browser does not support the video tag.
+					</video>
+				)}
 
-            {/* Conditionally render the link */}
-            {section.link && (
-               <a href={section.link} target="_blank" rel="noopener noreferrer" className="box-link">
-                  Link
-               </a>
-            )}
+				{/* Render link only if valid */}
+				{section.link && (
+					<a href={section.link} target="_blank" rel="noopener noreferrer" className="box-link">
+						Link
+					</a>
+				)}
 
-            {/* Conditionally render the ASCII art */}
-            {section.ascii && (
-               <pre className="small_ascii">{section.ascii}</pre>
-            )}
-         </div>
-
-         {/* Optional spacers, can remove or conditionally render these if needed */}
-         <div className="spacers">⋆</div>
-         <div className="spacers">⋆</div>
-         <div className="spacers">⋆</div>
-      </div>
-   );
+				<pre className="small_ascii">{section.ascii}</pre>
+			</div>
+			<div className="spacers">⌄</div>
+			<div className="spacers">⌄</div>
+			<div className="spacers">⌄</div>
+		</div>
+	);
 }
 
 export default ContentSmallScreen;
