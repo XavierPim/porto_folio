@@ -292,7 +292,7 @@ export const wipText = [
 	},
 	{
 		window: "compLeetCode/",
-		title: "Complete LeetCode in C++",
+		title: "Complete LeetCode in C++/Java",
 		subtitle: ["LeetCode with proper headers, classes, architecture"],
 		info: "user:  "+ leetUser,
 		ascii: "",
