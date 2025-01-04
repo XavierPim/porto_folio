@@ -27,9 +27,6 @@ h1, h2, h3, p, li {
     color: black;
 }
 
-.resumeBody>*{
-font-size: 0.9em;
-}
 
 h1 {
     text-align: center;
@@ -54,7 +51,7 @@ h2 {
 h3 {
     margin: 0;
     display: flex;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
     color: #2f5496;
@@ -94,6 +91,7 @@ Header
     justify-content: center;
     align-items: center;
     white-space: nowrap;
+    overflow:scroll;
 }
 
 .headerInfo > ul > li {
@@ -116,7 +114,7 @@ Content
 ============= */
 .list-section > li {
     list-style-type: square;
-    font-size: .8em;
+    font-size: 10px;
 }
 
 .list-section{
@@ -140,17 +138,32 @@ Content
     .headerInfo > ul {
         font-size: 10px;
     }
+    h3{
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 768px) {
     .headerInfo > ul {
         font-size: 9px;
     }
+    h3{
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 576px) {
-    .headerInfo > ul {
-        font-size: 8px;
+    .headerInfo > ul > li {
+        font-size: 10px;
+    }
+    .list-section > li {
+        font-size: 10px;
+    }
+    p{
+        font-size: 10px;
+    }
+    h3{
+        font-size: 11px;
     }
 }
 
