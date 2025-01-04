@@ -4,7 +4,6 @@
 
 .html, body{
     font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-    font-size:  15px;
     line-height: 1.4;
     background-color: white;
     
@@ -27,6 +26,7 @@ a {
 h1, h2, h3, p, li {
     color: black;
 }
+
 .resumeBody>*{
 font-size: 0.9em;
 }
@@ -58,10 +58,12 @@ h3 {
     font-weight: bold;
     text-transform: uppercase;
     color: #2f5496;
+    padding: 0px 10px;
+    
 }
 
 p {
-    padding: 0;
+    padding: 0px 10px;
     margin-block-end: 3px;
     margin-block-start: 3px;
 }
@@ -84,19 +86,19 @@ Header
 }
 
 .headerInfo {
-    margin-bottom: 6px;
+    margin-bottom: 3px;
 }
 
 .headerInfo > ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 11px;
     white-space: nowrap;
 }
 
 .headerInfo > ul > li {
     list-style-type: none;
+    font-size: .9em;
     margin-bottom: 1px;
 }
 
@@ -112,12 +114,13 @@ Header
 /* =============
 Content
 ============= */
-.list-section > ul > li {
+.list-section > li {
     list-style-type: square;
+    font-size: .8em;
 }
 
 .list-section{
-    padding-left: 70px;
+    padding-left:30px;
 }
 
 .company-name {
