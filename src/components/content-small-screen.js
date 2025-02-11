@@ -36,9 +36,16 @@ function ContentSmallScreen({ section }) {
 						<li key={index}>{item}</li>
 					))}
 				</ul>
+				
+				{/* Conditionally render multiple images if section.image is an array */}
+				{Array.isArray(section.image) ? (
+					section.image.map((imgSrc, index) => (
+						<img key={index} src={imgSrc} alt={`section visual ${index + 1}`} className="small_img" />
+					))
+				) : (
+					section.image && <img src={section.image} alt="section visual" className="small_img" />
+				)}
 
-				{/* Conditionally render the image */}
-				{imageSrc && <img src={imageSrc} alt="section visual" className="small_img" />}
 
 				{/* Conditionally render the video */}
 				{section.video && (

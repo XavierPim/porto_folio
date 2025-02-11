@@ -3,6 +3,7 @@ import hiking from "../hiking.jpg";
 import leetcurr from "../leetcurr.png"; // Import the fallback image
 
 const gitStats = "https://github-readme-stats.vercel.app/api/top-langs/?username=XavierPim&layout=compact&theme=dark&hide=shell,cmake";
+const gitCal = "https://github-readme-streak-stats.herokuapp.com/?user=XavierPim&theme=dark";
 const leet = "https://leetcard.jacoblin.cool/XavierP?theme=dark";
 
 const HomeContent = [
@@ -33,7 +34,7 @@ const HomeContent = [
 		subtitle: ["A full-stack developer in multiple languages.", "Recent grad with 5 medium-sized projects"],
 		info: "",
 		ascii: "",
-		image: gitStats,
+		image: [gitStats, gitCal],
 		text: "Current Github stats",
 		link: "",
 	},
