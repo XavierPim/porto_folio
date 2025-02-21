@@ -17,6 +17,15 @@ function Projects() {
     const [activeTab, setActiveTab] = useState("c++");
     const [projectCount, setProjectCount] = useState(0);
 
+    // Backgrounds mapping
+    const backgrounds = {
+        "c++": cplusBG,
+        "javascript": jsBG,
+        "dart": dartBG,
+        "c": cBG,
+        "workInProgress": wipBG
+    };
+
     const getContentForTab = (tab) => {
         switch (tab) {
             case "c++":
@@ -34,27 +43,12 @@ function Projects() {
         }
     };
 
-    const getBackgroundForTab = () => {
-        switch (activeTab) {
-            case "c++":
-                return cplusBG;
-            case "javascript":
-                return jsBG;
-            case "dart":
-                return dartBG;
-            case "c":
-                return cBG;
-            case "WIP":
-                return wipBG;
-            default:
-                return ""; 
-        }
-    };
+    const getBackgroundForTab = () => backgrounds[activeTab] || "";
 
     useEffect(() => {
         const content = getContentForTab(activeTab);
-        setProjectCount(content.length); 
-    }, [activeTab]); 
+        setProjectCount(content.length);
+    }, [activeTab]);
 
     const renderContent = () => {
         const content = getContentForTab(activeTab);
@@ -68,8 +62,7 @@ function Projects() {
     return (
         <div className="projects-container">
             <Sidebar />
-            <div
-                className="content-container">
+            <div className="content-container">
                 <ContentBigScreen tab_name={tab_name}>
                     <div className="header">
                         <div className="page_title">{title}</div>
@@ -79,45 +72,26 @@ function Projects() {
                     </div>
                     <div className="language-container">
                         <div className="lang-tabs">
-                            <div
-                                onClick={() => setActiveTab("c++")}
-                                className={activeTab === "c++" ? "active-tab" : ""}
-                            >
-                                c++/
-                            </div>
-                            <div
-                                onClick={() => setActiveTab("javascript")}
-                                className={activeTab === "javascript" ? "active-tab" : ""}
-                            >
-                                javascript/
-                            </div>
-                            <div
-                                onClick={() => setActiveTab("dart")}
-                                className={activeTab === "dart" ? "active-tab" : ""}
-                            >
-                                dart/
-                            </div>
-                            <div
-                                onClick={() => setActiveTab("c")}
-                                className={activeTab === "c" ? "active-tab" : ""}
-                            >
-                                c/
-                            </div>
-                            <div
-                                onClick={() => setActiveTab("workInProgress")}
-                                className={activeTab === "workInProgress" ? "active-tab" : ""}
-                            >
-                                wip/
-                            </div>
+                            {Object.keys(backgrounds).map((lang) => (
+                                <div
+                                    key={lang}
+                                    onClick={() => setActiveTab(lang)}
+                                    className={activeTab === lang ? "active-tab" : ""}
+                                >
+                                    {lang}/
+                                </div>
+                            ))}
                         </div>
                         <div className="lang-content"
-						  style={{
-							backgroundImage: `url(${getBackgroundForTab()})`,
-							backgroundSize:'40%',
-							backgroundPosition: 'center',
-							backgroundRepeat: 'no-repeat',
-							backgroundAttachment: 'fixed',
-						}}>{renderContent()}</div>
+                            style={{
+                                backgroundImage: `url(${getBackgroundForTab()})`,
+                                backgroundSize: '40%',
+                                backgroundPosition: 'center',
+                                backgroundRepeat: 'no-repeat',
+                                backgroundAttachment: 'fixed',
+                            }}>
+                            {renderContent()}
+                        </div>
                     </div>
                 </ContentBigScreen>
             </div>
