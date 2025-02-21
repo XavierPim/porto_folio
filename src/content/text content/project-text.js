@@ -36,110 +36,96 @@ const chat_link = "https://github.com/XavierPim/Multi-Client_Chat_Server_IPv4_6.
 
 
 export const cplusplusText = [
-	{
-		window: "genetic-algo-TSP/",
-		title: "Genetic Algorithm for Travelling Salesman Problem",
-		subtitle: ["Description: Developed an algorithm to solve the Travelling Salesman Problem using genetic algorithms, optimizing the shortest possible route across multiple cities"],
-		info: "Features Recursive approach used for crossover and the following: ",
-		ascii: "",
-		text: ["selection",
-			"crossover", "mutation"],
-		image: genetic,
-		link: cplus_link,
-	},
-	{
-		window: "google-search-makrov/",
-		title: "Google Search Ranking using Markov Process",
-		subtitle: ["Description: Implemented a Markov Process to simulate Google's PageRank algorithm, calculating page importance based on link structure and transitioning probabilities."],
-		info: "The project involved constructing:",
-		ascii: "",
-		image: google,
-		text: [
-			"connectivity",
-			"importance",
-			"teleportation",
-			"compute and rank the importance of web pages",
-		],
-		link: cplus_link,
-	},
-	{
-		window: "rpn-calculator/",
-		title: "Reverse Polish Notation Calculator",
-		subtitle: ["Description: Demonstrates the use of abstract classes and a stack to handle different mathematical operations"],
-		info: "Current Functionality",
-		ascii: "",
-		image: calculator,
-		text: [
-			"addition",
-			"subtraction",
-			"division",
-			"multiplication"
-		],
-		link: cplus_link,
-	},
-	{
-		window: "auctioneer-observer/",
-		title: "Auctioneer program to demonstrate observer pattern",
-		subtitle: [
-			"Description: Implemented an auction system where the Auctioneer notifies bidders of the highest bid, allowing them to place new bids based on their budgets and bidding strategies.",
-			"The system manages the bidding process by updating bids and identifying the highest bidder through iterative notifications."
-		],
-		info: "",
-		ascii: "",
-		image: auctioneer,
-		text: [],
-		link: cplus_link,
-	},
-	{
-		window: "inheritance-polymorphism/",
-		title: "Inheritance and Polymorphism",
-		subtitle: ["Description: Created a simulation that showcases inheritance and polymorphism through a hierarchy of animals. Different types of animals exhibit unique behaviours such as movement, eating, and sleeping. "],
-		info: "",
-		ascii: "",
-		image: poly,
-		text: [],
-		link: cplus_link,
-	},
-	{
-		window: "library-generator/",
-		title: "Library Management System with Generator Pattern",
-		subtitle: ["Description: Implemented a library management system utilizing the Generator pattern to streamline the creation of different types of library items. "],
-		info: "Features:",
-		ascii: "",
-		image: library,
-		text: [
-			"Inventory Management",
-			"Search Items",
-			"Remove Items",
-			"Delete Items"
-		],
-		link: cplus_link,
-	},
-	{
-		window: "course-conflict/",
-		title: "Course Scheduling and Conflict Resolution",
-		subtitle: ["Description: Implemented a course scheduling system that sorts courses by day and time, and identifies scheduling conflicts. It demonstrates efficient organization and conflict detection in managing course schedules. "],
-		info: "Involves:",
-		ascii: "",
-		image: course,
-		text: ["Text file parsing", "Dynamic conflict resolution"],
-		link: cplus_link,
-	},
-	{
-		window: "abstract-factory pattern",
-		title: "Maze Creation with Abstract Classes/Factory Pattern",
-		subtitle: [
-			"Description: This implementation demonstrates the use of the factory pattern combined with abstract classes to generate themed mazes.",
-			"The Maze class serves as an abstract base class, defining a common interface for adding rooms.",
-			"Derived classes like FairyMaze and DystopianMaze implement this interface to add rooms to their respective mazes."
-		],
-		info: "",
-		ascii: "",
-		image: abstract,
-		text: [],
-		link: cplus_link,
-	},
+    {
+        window: "genetic-algo-TSP/",
+        title: "Genetic Algorithm for Travelling Salesman Problem",
+        subtitle: ["Description: Developed an algorithm to solve the Travelling Salesman Problem using genetic algorithms, optimizing the shortest possible route across multiple cities"],
+        info: "Features Recursive approach used for crossover and the following: ",
+        ascii: "",
+        text: ["selection", "crossover", "mutation"],
+        image: genetic,
+        link: cplus_link,
+        type: "ds|algo"  
+    },
+    {
+        window: "google-search-makrov/",
+        title: "Google Search Ranking using Markov Process",
+        subtitle: ["Description: Implemented a Markov Process to simulate Google's PageRank algorithm, calculating page importance based on link structure and transitioning probabilities."],
+        info: "The project involved constructing:",
+        ascii: "",
+        image: google,
+        text: ["connectivity", "importance", "teleportation", "compute and rank the importance of web pages"],
+        link: cplus_link,
+        type: "ds|algo"
+    },
+    {
+        window: "rpn-calculator/",
+        title: "Reverse Polish Notation Calculator",
+        subtitle: ["Description: Demonstrates the use of abstract classes and a stack to handle different mathematical operations"],
+        info: "Current Functionality",
+        ascii: "",
+        image: calculator,
+        text: ["addition", "subtraction", "division", "multiplication"],
+        link: cplus_link,
+        type: "ds|algo"
+    },
+    {
+        window: "auctioneer-observer/",
+        title: "Auctioneer program to demonstrate observer pattern",
+        subtitle: ["Description: Implemented an auction system where the Auctioneer notifies bidders of the highest bid, allowing them to place new bids based on their budgets and bidding strategies.", "The system manages the bidding process by updating bids and identifying the highest bidder through iterative notifications."],
+        info: "",
+        ascii: "",
+        image: auctioneer,
+        text: [],
+        link: cplus_link,
+        type: "ds|algo"
+    },
+    {
+        window: "inheritance-polymorphism/",
+        title: "Inheritance and Polymorphism",
+        subtitle: ["Description: Created a simulation that showcases inheritance and polymorphism through a hierarchy of animals. Different types of animals exhibit unique behaviours such as movement, eating, and sleeping."],
+        info: "",
+        ascii: "",
+        image: poly,
+        text: [],
+        link: cplus_link,
+        type: "ds|algo"
+    },
+    {
+        window: "library-generator/",
+        title: "Library Management System with Generator Pattern",
+        subtitle: ["Description: Implemented a library management system utilizing the Generator pattern to streamline the creation of different types of library items."],
+        info: "Features:",
+        ascii: "",
+        image: library,
+        text: ["Inventory Management", "Search Items", "Remove Items", "Delete Items"],
+        link: cplus_link,
+        type: "ds|algo"
+    },
+    {
+        window: "course-conflict/",
+        title: "Course Scheduling and Conflict Resolution",
+        subtitle: ["Description: Implemented a course scheduling system that sorts courses by day and time, and identifies scheduling conflicts. It demonstrates efficient organization and conflict detection in managing course schedules."],
+        info: "Involves:",
+        ascii: "",
+        image: course,
+        text: ["Text file parsing", "Dynamic conflict resolution"],
+        link: cplus_link,
+        type: "ds|algo"
+    },
+    {
+        window: "abstract-factory pattern",
+        title: "Maze Creation with Abstract Classes/Factory Pattern",
+        subtitle: ["Description: This implementation demonstrates the use of the factory pattern combined with abstract classes to generate themed mazes.", "The Maze class serves as an abstract base class, defining a common interface for adding rooms.", "Derived classes like FairyMaze and DystopianMaze implement this interface to add rooms to their respective mazes."],
+        info: "",
+        ascii: "",
+        image: abstract,
+        text: [],
+        link: cplus_link,
+        type: "ds|algo"
+    }
 ];
+
 
 export const javascriptText = [
 	{
@@ -159,6 +145,7 @@ export const javascriptText = [
 			"Cloudinary - User video and image data",
 		],
 		link: "",
+		type: "webapps"
 	},
 	{
 		window: "umbrella/",
@@ -173,6 +160,7 @@ export const javascriptText = [
 		image: umbrella,
 		text: [],
 		link: umbrella_link,
+		type: "webapps"
 	},
 	{
 		window: "serenity/",
@@ -186,6 +174,7 @@ export const javascriptText = [
 		video: serenity,
 		text: [],
 		link: "",
+		type: "webapps"
 	},
 ];
 
@@ -207,6 +196,7 @@ export const dartText = [
 			"OpenAi API - English language parsing model",
 		],
 		link: "",
+		type: "embedded"
 	},
 ];
 
@@ -225,6 +215,7 @@ export const cText = [
 			"Multi-OS support: Ubuntu, MacOS, Fedora",
 		],
 		link: ncurse_link,
+		type: "embedded"
 	},
 	{
 		window: "multi_client_chat_server_IPV_4|6/",
@@ -242,6 +233,7 @@ export const cText = [
 			"Multi-OS support: Ubuntu, MacOS, Fedora",
 		],
 		link: chat_link,
+		type: "embedded"
 	},
 	{
 		window: "remote_shell_IPv_4",
@@ -256,6 +248,7 @@ export const cText = [
 			"Can accept clients and be sent commands via the local network"
 		],
 		link: shell_link,
+		type: "embedded"
 	},
 
 	{
@@ -271,6 +264,7 @@ export const cText = [
 			"Multi-OS support: Ubuntu, MacOS, Fedora",
 		],
 		link: "",
+		type: "embedded"
 	},
 ];
 
@@ -290,31 +284,31 @@ export const wipText = [
 			"Database: MySQL",
 		],
 		link: "https://github.com/XavierPim/Umbrella_Server.git",
+		type: "webapps",
 	},
 	{
-		"window": "requestSRC/",
-		"title": "requestSRC",
-		"subtitle": [
-			"Lightweight middleware for real-time HTTP request monitoring",
+		window: "requestSRC/",
+		title: "requestSRC",
+		subtitle: [
+			"Lightweight NPM package for real-time HTTP request monitoring",
 			"Captures client metadata and enriches with geolocation",
 			"Logs data to a SQL database (PostgreSQL/MySQL)",
 			"Built-in admin dashboard for traffic monitoring",
 			"Supports filtering and privacy compliance",
 			"Available on npm for easy installation from node page manager(NPM)" 
 		],
-		"info": "RequestSRC is a lightweight middleware designed for real-time monitoring of HTTP requests.",
-		"ascii": "",
-		"image": "",
-		"text": [
+		info: "RequestSRC is a lightweight middleware designed for real-time monitoring of HTTP requests.",
+		ascii: "",
+		image: "",
+		text: [
 			"Client: Any browser",
 			"Server: User-defined",
 			"Database: PostgreSQL/MySQL",
 			"Real-time request logging with geolocation",
 		],
-		"link": "https://github.com/XavierPim/requestSRC"
-	}
-,
-
+		link: "https://github.com/XavierPim/requestSRC",
+		type: "opensrc"
+	},
 	{
 		window: "compLeetCode/",
 		title: "Complete LeetCode in C++/Java",
@@ -324,5 +318,6 @@ export const wipText = [
 		image: leetCard,
 		text: [],
 		link: leetLink,
+		type: "ds|algo"
 	},
 ];

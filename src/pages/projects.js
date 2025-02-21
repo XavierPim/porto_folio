@@ -4,18 +4,20 @@ import Sidebar from "../components/sidebar";
 import ContentBigScreen from "../components/content-big-screen";
 import tabs from "../content/text content/nav-tabs";
 import { cplusplusText, javascriptText, dartText, cText, wipText } from "../content/text content/project-text";
-import ContentSmallScreen from "../components/content-small-screen";
 import cplusBG from "../content/project-cplus/cplus.png";
 import cBG from "../content/project-c/c.png";
 import jsBG from "../content/project-js/js.png";
 import wipBG from "../content/project-WIP/WIP.png";
 import dartBG from "../content/project-dart/dart.png";
+import ProjectTabs from "../components/projectsTabs";
+
 
 function Projects() {
     const title = "-Projects-";
     const countTitle = "Count:";
-    const [activeTab, setActiveTab] = useState("c++");
+    const [activeTab, setActiveTab] = useState("webapps");
     const [projectCount, setProjectCount] = useState(0);
+    const [viewMode, setViewMode] = useState("type");
 
     // Backgrounds mapping
     const backgrounds = {
@@ -26,38 +28,41 @@ function Projects() {
         "workInProgress": wipBG
     };
 
-    const getContentForTab = (tab) => {
-        switch (tab) {
-            case "c++":
-                return cplusplusText;
-            case "javascript":
-                return javascriptText;
-            case "dart":
-                return dartText;
-            case "c":
-                return cText;
-            case "workInProgress":
-                return wipText;
-            default:
-                return [];
-        }
+    // Combine all projects
+    const allProjects = [
+        ...cplusplusText,
+        ...javascriptText,
+        ...dartText,
+        ...cText,
+        ...wipText
+    ];
+
+    // Language-based project mapping
+    const languageTabs = {
+        "c++": { content: cplusplusText },
+        "javascript": { content: javascriptText },
+        "dart": { content: dartText },
+        "c": { content: cText },
+        "wip": { content: wipText }
     };
 
-    const getBackgroundForTab = () => backgrounds[activeTab] || "";
+    // Type-based project mapping
+    const typeTabs = {
+        "webapps": { content: allProjects.filter(p => p.type === "webapps") },
+        "embedded": { content: allProjects.filter(p => p.type === "embedded") },
+        "opensrc": { content: allProjects.filter(p => p.type === "opensrc") },
+        "ds|algo": { content: allProjects.filter(p => p.type === "ds|algo") },
+    };
+    
+    const tabsData = viewMode === "language" ? languageTabs : typeTabs;
 
     useEffect(() => {
-        const content = getContentForTab(activeTab);
-        setProjectCount(content.length);
-    }, [activeTab]);
+        setProjectCount(tabsData[activeTab]?.content.length || 0);
+    }, [activeTab, tabsData]);
 
-    const renderContent = () => {
-        const content = getContentForTab(activeTab);
-        return content.map((section, index) => (
-            <ContentSmallScreen key={index} section={section} />
-        ));
-    };
+    const getBackgroundForTab = (tab) => backgrounds[tab] || "";
 
-    var tab_name = tabs.projects + activeTab;
+    var tab_name = `${tabs.projects}${activeTab}`;
 
     return (
         <div className="projects-container">
@@ -69,30 +74,25 @@ function Projects() {
                         <div className="page_title">
                             {countTitle} {projectCount}
                         </div>
+                        <button
+                            onClick={() => {
+                                const newViewMode = viewMode === "language" ? "type" : "language";
+                                setViewMode(newViewMode);
+
+                                // Reset active tab based on the new view mode
+                                setActiveTab(newViewMode === "type" ? "webapps" : "c++");
+                            }}
+                        >
+                            {viewMode === "language" ? "Type" : "Language"} View
+                        </button>
+
                     </div>
-                    <div className="language-container">
-                        <div className="lang-tabs">
-                            {Object.keys(backgrounds).map((lang) => (
-                                <div
-                                    key={lang}
-                                    onClick={() => setActiveTab(lang)}
-                                    className={activeTab === lang ? "active-tab" : ""}
-                                >
-                                    {lang}/
-                                </div>
-                            ))}
-                        </div>
-                        <div className="lang-content"
-                            style={{
-                                backgroundImage: `url(${getBackgroundForTab()})`,
-                                backgroundSize: '40%',
-                                backgroundPosition: 'center',
-                                backgroundRepeat: 'no-repeat',
-                                backgroundAttachment: 'fixed',
-                            }}>
-                            {renderContent()}
-                        </div>
-                    </div>
+                    <ProjectTabs
+                        tabsData={tabsData}
+                        activeTab={activeTab}
+                        setActiveTab={setActiveTab}
+                        getBackgroundForTab={getBackgroundForTab}
+                    />
                 </ContentBigScreen>
             </div>
         </div>
