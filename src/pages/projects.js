@@ -83,7 +83,7 @@ function Projects() {
                                 setActiveTab(newViewMode === "type" ? "webapps" : "c++");
                             }}
                         >
-                            {viewMode === "language" ? "Type" : "Language"} View
+                            {viewMode === "language" ? "Type" : "Lang"} View
                         </button>
 
                     </div>
