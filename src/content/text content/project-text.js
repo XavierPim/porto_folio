@@ -10,6 +10,7 @@ import library from "../project-cplus/library.png"
 import chatserver from "../project-c/multiclient.png"
 import ncruses from "../project-c/ncruses.png"
 import shell from "../project-c/remote.png"
+import request from "../project-js/requestSRCbg.png"
 
 
 
@@ -176,6 +177,29 @@ export const javascriptText = [
 		link: "",
 		type: "webapps"
 	},
+	{
+		window: "requestSRC/",
+		title: "requestSRC",
+		subtitle: [
+			"Lightweight NPM package for real-time HTTP request monitoring",
+			"Captures client metadata and enriches with geolocation",
+			"Logs data to a SQL database (PostgreSQL/MySQL)",
+			"Built-in admin dashboard for traffic monitoring",
+			"Supports filtering and privacy compliance",
+			"Available on npm for easy installation from node page manager(NPM)" 
+		],
+		info: "RequestSRC is a lightweight middleware designed for real-time monitoring of HTTP requests.",
+		ascii: "",
+		image: request,
+		text: [
+			"Client: Any browser",
+			"Server: User-defined",
+			"Database: PostgreSQL/MySQL",
+			"Real-time request logging with geolocation",
+		],
+		link: "https://github.com/XavierPim/requestSRC",
+		type: "opensrc"
+	},
 ];
 
 export const dartText = [
@@ -285,29 +309,6 @@ export const wipText = [
 		],
 		link: "https://github.com/XavierPim/Umbrella_Server.git",
 		type: "webapps",
-	},
-	{
-		window: "requestSRC/",
-		title: "requestSRC",
-		subtitle: [
-			"Lightweight NPM package for real-time HTTP request monitoring",
-			"Captures client metadata and enriches with geolocation",
-			"Logs data to a SQL database (PostgreSQL/MySQL)",
-			"Built-in admin dashboard for traffic monitoring",
-			"Supports filtering and privacy compliance",
-			"Available on npm for easy installation from node page manager(NPM)" 
-		],
-		info: "RequestSRC is a lightweight middleware designed for real-time monitoring of HTTP requests.",
-		ascii: "",
-		image: "",
-		text: [
-			"Client: Any browser",
-			"Server: User-defined",
-			"Database: PostgreSQL/MySQL",
-			"Real-time request logging with geolocation",
-		],
-		link: "https://github.com/XavierPim/requestSRC",
-		type: "opensrc"
 	},
 	{
 		window: "compLeetCode/",
