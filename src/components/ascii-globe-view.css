@@ -1,5 +1,5 @@
 .ascii-globe-wrap {
-  --globe-size: min(98vw, 86vh);
+  --globe-size: min(96vw, 78dvh);
   position: relative;
   display: grid;
   place-items: center;
@@ -107,7 +107,7 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 5.5%;
+  bottom: 10.5%;
   z-index: 4;
   width: min(92vw, 920px);
   text-align: center;
@@ -120,10 +120,11 @@
 
 @media (max-width: 900px) {
   .ascii-globe-wrap {
-    --globe-size: min(99vw, 72vh);
+    --globe-size: min(97vw, 66dvh);
   }
 
   .ascii-globe-vibe {
     font-size: 22px;
+    bottom: 12%;
   }
 }
