@@ -7,6 +7,7 @@ import Expertise from './pages/expertise.js'
 import Experience from './pages/experience.js'
 import Projects from './pages/projects.js'
 import Contact from './pages/contact.js'
+import GlobeV2 from './pages/globe-v2.js'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path="/expertise" element={<Expertise/>} />
       <Route path="/experience" element={<Experience/>} />
       <Route path="/projects" element={<Projects/>} />
+      <Route path="/globe-v2" element={<GlobeV2/>} />
       <Route path="/contact" element={<Contact/>} />
       </Routes>
     </div>

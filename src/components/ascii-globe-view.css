@@ -1,0 +1,129 @@
+.ascii-globe-wrap {
+  --globe-size: min(98vw, 86vh);
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  overflow: hidden;
+}
+
+.ascii-globe-root {
+  position: relative;
+  width: var(--globe-size);
+  aspect-ratio: 1 / 1;
+  background: #000;
+  z-index: 2;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.ascii-globe-ascii-layer {
+  width: 100%;
+  height: 100%;
+  background: transparent !important;
+}
+
+.ascii-globe-ascii-layer * {
+  background: transparent !important;
+}
+
+.ascii-globe-ascii-layer pre {
+  margin: 0;
+  color: #3bff31;
+  background: transparent;
+  font-size: 9px;
+  line-height: 9px;
+  letter-spacing: 0;
+}
+
+.ascii-globe-fallback {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  color: #3bff31;
+  background: transparent;
+  font-size: 10px;
+  line-height: 10px;
+  white-space: pre;
+}
+
+.ascii-globe-pin-toggle {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  z-index: 5;
+  background: #000;
+  color: #3bff31;
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  cursor: pointer;
+  transition: box-shadow 180ms ease;
+}
+
+.ascii-globe-pin-toggle:hover {
+  box-shadow: 0 0 11px rgba(255, 255, 255, 0.35);
+}
+
+.ascii-globe-pin-icon {
+  position: relative;
+  display: block;
+  width: 13px;
+  height: 20px;
+}
+
+.ascii-globe-pin-icon::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 13px;
+  height: 13px;
+  border: 2px solid currentColor;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+}
+
+.ascii-globe-pin-icon::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 5px;
+  height: 5px;
+  border: 2px solid currentColor;
+  border-radius: 999px;
+}
+
+.ascii-globe-vibe {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 5.5%;
+  z-index: 4;
+  width: min(92vw, 920px);
+  text-align: center;
+  font-size: 34px;
+  line-height: 1.2;
+  color: #3bff31;
+  text-shadow: 0 0 9px rgba(59, 255, 49, 0.45);
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .ascii-globe-wrap {
+    --globe-size: min(99vw, 72vh);
+  }
+
+  .ascii-globe-vibe {
+    font-size: 22px;
+  }
+}

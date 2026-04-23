@@ -1,0 +1,43 @@
+.globe-v2-container {
+  width: 100%;
+  height: 100dvh;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+}
+
+.globe-v2-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #3bff31;
+  color: #1e1e1e;
+  padding: 6px 10px;
+  font-size: 26px;
+}
+
+.globe-v2-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.globe-v2-actions > button {
+  margin: 0;
+  padding: 4px 10px;
+}
+
+.globe-v2-frame {
+  border: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .globe-v2-topbar {
+    font-size: 18px;
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-start;
+  }
+}
+

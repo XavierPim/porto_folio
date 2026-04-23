@@ -3,55 +3,49 @@
   width: 100vw;
   height: 100vh; 
   position: relative; 
+  background: #000;
+  overflow: hidden;
 }
 
 .ascii-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
   z-index: 0;
   pointer-events: none; 
-  opacity: 1;
-  transition: opacity 1s ease-in-out; 
+  opacity: 0.72;
 }
-
-.canvas-hidden {
-  opacity: 0; 
-}
-.ascii-art-welcome{
-  font-size: 20px;
-}
-
-.ascii-art-welcome, .enter, h2, h3 , #typewriter{
+.globe-welcome-embed, .enter, .enter-options, h2, h3{
   position: relative;
   z-index: 1;
   opacity: 0; 
   transition: opacity 1s ease-in-out; 
 }
 
-.animation-complete .ascii-art-welcome,
+.animation-complete .globe-welcome-embed,
 .animation-complete .enter,
+.animation-complete .enter-options,
 .animation-complete h2,
-.animation-complete h3,  
-.animation-complete #typewriter{
+.animation-complete h3{
   opacity: 1;
 }
 
-#typewriter {
-  overflow: hidden; 
-  border-right: .10em solid #3BFF31; 
-  white-space: nowrap; 
-  margin: 0 auto; 
-  letter-spacing: .01em; 
-  max-width: 15em;
-  animation: 
-    typing 11s steps(50, end), 
-    blink-caret 1s step-end infinite;
+.globe-welcome-embed {
+  width: 100vw;
+  height: min(63vh, 650px);
+  border: 0;
+  background: transparent;
+  display: block;
+  margin: 0 auto;
 }
 
-
-#typewriter.visible {
-  opacity: 1;
+.enter-options {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
 }
 
 h1 {
@@ -63,12 +57,13 @@ h1 {
   animation: breathing 3s ease-in-out infinite;
   transition: text-shadow 1s ease-in-out, color 1s ease-in-out;
   padding: 6px 15px;
-  margin:20px auto 0;
+  margin: 0;
   cursor: pointer;
   background-color: black;
-  max-width: 130px;
+  max-width: 180px;
   border: 2px dashed #3BFF31;
   border-radius: 10px;
+  font-size: 34px;
 }
 
 .enter:hover {
@@ -113,30 +108,13 @@ h3 {
   }
 }
 
-/* Keyframes for typewriter effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #3BFF31; }
-}
-
-
 @media only screen and (max-width: 768px) {
-#typewriter {
-  overflow: hidden; 
-  border-right: .10em solid #3BFF31; 
-  white-space: nowrap; 
-  margin: 0 auto; 
-  letter-spacing: .01em; 
-  max-width: 5em;
-  animation: 
-    typing 11s steps(50, end), 
-    blink-caret 1s step-end infinite;
-}
+
+  .globe-welcome-embed {
+    width: 100vw;
+    height: 52vh;
+  }
+
   h2 {
     position:relative;
     font-size: 30px;
@@ -157,8 +135,14 @@ right: auto;
     margin: 10px;
   }
 
-  .ascii-art-welcome{
-    font-size: 8px;
+  .enter-options {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .enter {
+    font-size: 24px;
+    max-width: 170px;
   }
   
   .welcome-container{
