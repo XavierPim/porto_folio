@@ -1,6 +1,6 @@
 .globe-v2-container {
   width: 100%;
-  height: 100dvh;
+  min-height: 100dvh;
   background: #000;
   display: flex;
   flex-direction: column;
@@ -29,7 +29,9 @@
 .globe-v2-frame {
   border: 0;
   width: 100%;
-  height: 100%;
+  height: 67dvh;
+  min-height: 420px;
+  margin-block: auto;
 }
 
 @media only screen and (max-width: 768px) {
@@ -39,5 +41,10 @@
     gap: 6px;
     align-items: flex-start;
   }
-}
 
+  .globe-v2-frame {
+    height: 68dvh;
+    min-height: 0;
+    margin-block: auto;
+  }
+}
