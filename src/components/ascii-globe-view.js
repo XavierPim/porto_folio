@@ -5,8 +5,7 @@ import "./ascii-globe-view.css";
 function AsciiGlobeView() {
   const mountRef = useRef(null);
   const globeRef = useRef(null);
-  const [city, setCity] = useState("your city");
-  const [vibe, setVibe] = useState("auto-focusing to your region...");
+  const [vibe, setVibe] = useState("Welcome");
 
   useEffect(() => {
     let cancelled = false;
@@ -15,15 +14,14 @@ function AsciiGlobeView() {
       const location = await resolveApproxLocation();
       if (cancelled || !mountRef.current) return;
 
-      setCity(location.city);
-      setVibe("auto-focusing to your region...");
+      setVibe("Welcome");
 
       globeRef.current = createAsciiGlobe({
         mount: mountRef.current,
         lat: location.lat,
         lon: location.lon,
         onFocusComplete: () => {
-          if (!cancelled) setVibe(buildVibeLine(location.city));
+          if (!cancelled) setVibe("Welcome");
         },
       });
     };
@@ -41,12 +39,8 @@ function AsciiGlobeView() {
 
   const onTogglePin = () => {
     if (!globeRef.current) return;
-    const next = globeRef.current.toggleAxisMode();
-    if (next === "orbit") {
-      setVibe(buildVibeLine(city));
-    } else {
-      setVibe(`re-locking on ${city}...`);
-    }
+    globeRef.current.toggleAxisMode();
+    setVibe("Welcome");
   };
 
   return (
@@ -67,6 +61,9 @@ function AsciiGlobeView() {
 
 async function resolveApproxLocation() {
   const fallback = { lat: 0, lon: 0, city: "your area" };
+
+  const browserLocation = await resolveViaBrowserGeolocation();
+  if (browserLocation) return browserLocation;
 
   try {
     const local = await resolveViaLocalMaxIp();
@@ -96,6 +93,70 @@ async function resolveApproxLocation() {
   }
 
   return fallback;
+}
+
+async function resolveViaBrowserGeolocation() {
+  if (typeof window === "undefined" || !window.isSecureContext || !navigator?.geolocation) {
+    return null;
+  }
+
+  try {
+    const position = await getCurrentPosition({
+      enableHighAccuracy: true,
+      timeout: 7000,
+      maximumAge: 120000,
+    });
+
+    const lat = Number(position?.coords?.latitude);
+    const lon = Number(position?.coords?.longitude);
+    if (!Number.isFinite(lat) || !Number.isFinite(lon)) return null;
+
+    const city = (await resolveCityFromCoordinates(lat, lon)) || "your area";
+    return { lat, lon, city };
+  } catch {
+    return null;
+  }
+}
+
+function getCurrentPosition(options) {
+  return new Promise((resolve, reject) => {
+    navigator.geolocation.getCurrentPosition(resolve, reject, options);
+  });
+}
+
+async function resolveCityFromCoordinates(lat, lon) {
+  const encodedLat = encodeURIComponent(String(lat));
+  const encodedLon = encodeURIComponent(String(lon));
+
+  const candidates = [
+    {
+      url: `https://nominatim.openstreetmap.org/reverse?format=jsonv2&addressdetails=1&zoom=10&lat=${encodedLat}&lon=${encodedLon}`,
+      readCity: (payload) =>
+        payload?.address?.city ||
+        payload?.address?.town ||
+        payload?.address?.village ||
+        payload?.address?.municipality ||
+        payload?.address?.county,
+    },
+    {
+      url: `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${encodedLat}&longitude=${encodedLon}&localityLanguage=en`,
+      readCity: (payload) => payload?.city || payload?.locality || payload?.principalSubdivision,
+    },
+  ];
+
+  for (const candidate of candidates) {
+    try {
+      const response = await fetchWithTimeout(candidate.url, 2200);
+      if (!response || !response.ok) continue;
+      const payload = await response.json();
+      const city = cleanCityName(candidate.readCity(payload));
+      if (city) return city;
+    } catch {
+      // try next reverse-geocode provider
+    }
+  }
+
+  return "";
 }
 
 async function resolveViaLocalMaxIp() {
@@ -146,8 +207,13 @@ function getCityFromLabel(label) {
   const raw = String(label || "").trim();
   if (!raw) return "";
   const [city] = raw.split(",").map((part) => part.trim());
+  return cleanCityName(city);
+}
+
+function cleanCityName(value) {
+  const city = String(value || "").trim();
   if (!city || city.toLowerCase().includes("unknown")) return "";
-  return city;
+  return city.replace(/^(city|district|municipality|regional municipality)\s+of\s+/i, "").trim();
 }
 
 async function fetchWithTimeout(url, timeoutMs) {
@@ -158,30 +224,6 @@ async function fetchWithTimeout(url, timeoutMs) {
   } finally {
     window.clearTimeout(timer);
   }
-}
-
-function buildVibeLine(city) {
-  if (timeIsLate()) {
-    return `still awake at ${formatLocalTime()} in ${city}?`;
-  }
-
-  const lines = [
-    `how is it in ${city}?`,
-    `what's the vibe in ${city}?`,
-  ];
-  return lines[Math.floor(Math.random() * lines.length)];
-}
-
-function timeIsLate(now = new Date()) {
-  const hour = now.getHours();
-  return hour >= 23 || hour < 5;
-}
-
-function formatLocalTime(now = new Date()) {
-  return new Intl.DateTimeFormat(undefined, {
-    hour: "numeric",
-    minute: "2-digit",
-  }).format(now);
 }
 
 export default AsciiGlobeView;

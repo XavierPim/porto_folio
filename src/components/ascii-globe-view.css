@@ -116,6 +116,30 @@
   color: #9aff8f;
   text-shadow: 0 0 14px rgba(122, 255, 106, 0.65);
   pointer-events: none;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #9aff8f;
+  width: 7ch;
+  animation: ascii-globe-type 1.2s steps(7, end) 0.2s both, ascii-globe-caret 700ms step-end infinite;
+}
+
+@keyframes ascii-globe-type {
+  from {
+    width: 0;
+  }
+  to {
+    width: 7ch;
+  }
+}
+
+@keyframes ascii-globe-caret {
+  from,
+  to {
+    border-right-color: transparent;
+  }
+  50% {
+    border-right-color: #9aff8f;
+  }
 }
 
 @media (max-width: 900px) {
