@@ -167,7 +167,7 @@ function buildVibeLine(city) {
 
   const lines = [
     `how is it in ${city}?`,
-    `still awake in ${city}?`,
+    `what's the vibe in ${city}?`,
   ];
   return lines[Math.floor(Math.random() * lines.length)];
 }

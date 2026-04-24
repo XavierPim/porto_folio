@@ -2,9 +2,10 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { AsciiEffect } from "three/examples/jsm/effects/AsciiEffect.js";
 
-const DEFAULT_ASCII_SET = "   ..,:-=+*#";
+const DEFAULT_ASCII_SET = "  .,:-~=+*ox%#@";
 const WATER_MASK_TEXTURE_URL = "https://threejs.org/examples/textures/planets/earth_specular_2048.jpg";
 const GLOBE_RADIUS = 4;
+const OCEAN_LUMINANCE_THRESHOLD = 78;
 
 export function createAsciiGlobe({ mount, lat, lon, onFocusComplete }) {
   let renderer;
@@ -19,12 +20,12 @@ export function createAsciiGlobe({ mount, lat, lon, onFocusComplete }) {
 
   const effect = new AsciiEffect(renderer, DEFAULT_ASCII_SET, {
     invert: false,
-    resolution: 0.2,
+    resolution: 0.24,
     alpha: true,
   });
   effect.setSize(mount.clientWidth || window.innerWidth, mount.clientHeight || window.innerHeight);
   effect.domElement.className = "ascii-globe-ascii-layer";
-  effect.domElement.style.color = "#3bff31";
+  effect.domElement.style.color = "#7dff72";
   effect.domElement.style.backgroundColor = "transparent";
   mount.innerHTML = "";
   mount.appendChild(effect.domElement);
@@ -112,11 +113,11 @@ export function createAsciiGlobe({ mount, lat, lon, onFocusComplete }) {
 
     marker.lookAt(camera.position);
     const pulse = (Math.sin(now * 0.0062) + 1) * 0.5;
-    const halo = marker.userData.halo;
-    if (halo) {
-      const haloScale = 1 + pulse * 0.55;
-      halo.scale.setScalar(haloScale);
-      halo.material.opacity = 0.78 - pulse * 0.48;
+    const dot = marker.userData.dot;
+    if (dot) {
+      const dotScale = 1 + pulse * 1.05;
+      dot.scale.setScalar(dotScale);
+      dot.material.opacity = 0.5 + pulse * 0.5;
     }
     controls.update();
     effect.render(scene, camera);
@@ -212,31 +213,20 @@ function createAsciiFallback(mount, onFocusComplete) {
 
 function createMarker() {
   const group = new THREE.Group();
-  const haloMaterial = new THREE.MeshBasicMaterial({
-    color: 0xffffff,
-    side: THREE.DoubleSide,
-    transparent: true,
-    opacity: 0.56,
-    depthTest: false,
-    depthWrite: false,
-  });
-
-  const halo = new THREE.Mesh(new THREE.RingGeometry(0.115, 0.155, 44), haloMaterial);
-  halo.position.z = 0.005;
-  group.add(halo);
-
   const center = new THREE.Mesh(
-    new THREE.CircleGeometry(0.055, 28),
+    new THREE.CircleGeometry(0.072, 28),
     new THREE.MeshBasicMaterial({
       color: 0xffffff,
       side: THREE.DoubleSide,
+      transparent: true,
+      opacity: 0.9,
       depthTest: false,
       depthWrite: false,
     })
   );
   center.position.z = 0.03;
   group.add(center);
-  group.userData.halo = halo;
+  group.userData.dot = center;
 
   return group;
 }
@@ -279,7 +269,7 @@ function buildLandMaskTextureFromWaterMask(sourceTexture) {
     const b = data[i + 2];
     const luminance = 0.299 * r + 0.587 * g + 0.114 * b;
     // This specular mask behaves with darker oceans in our pipeline.
-    const isOcean = luminance < 78;
+    const isOcean = luminance < OCEAN_LUMINANCE_THRESHOLD;
 
     if (isOcean) {
       // Non-inverted pipeline: dark oceans render as sparse/black.
@@ -288,8 +278,15 @@ function buildLandMaskTextureFromWaterMask(sourceTexture) {
       data[i + 2] = 0;
       data[i + 3] = 255;
     } else {
-      // Land stays bright so it renders dense green ASCII.
-      const land = 244;
+      // Keep land bright but preserve source contrast so ASCII doesn't collapse to a single glyph.
+      const normalizedLand = Math.min(
+        1,
+        Math.max(0, (luminance - OCEAN_LUMINANCE_THRESHOLD) / (255 - OCEAN_LUMINANCE_THRESHOLD))
+      );
+      const channelVariance =
+        (Math.abs(r - g) + Math.abs(g - b) + Math.abs(b - r)) / (255 * 3);
+      const detail = normalizedLand * 0.76 + channelVariance * 0.24;
+      const land = Math.round(116 + detail * 126);
       data[i] = land;
       data[i + 1] = land;
       data[i + 2] = land;
